@@ -12,7 +12,7 @@ const Config = require('../config');
 const QueenJesiStack = require('queenjesi-npm');
 
 var CLR_DESC = ''
-lif (Config.LANG == 'EN') CLR_DESC = 'Clears all the messages from the chat.'
+if (Config.LANG == 'EN') CLR_DESC = 'Clears all the messages from the chat.'
 
 Jesi.adCmd({pattern: 'clear ?(.*)', fromMe: true, desc: CLR_DESC, usage: '.clear // .clear 947xxx // .clear 9474xxx-12345@g.us'}, (async (message, match) => {
     if (message.reply_message) {
