@@ -15,7 +15,7 @@ const Config = require('../config')
 
 const IBB = "👑━━☽【♥️ ```Don't Come My Inbox...✧``` ♥️】☾━━👑"
  if (Config.IBB == 'true') {
-Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false, onlyPm: true }, (async (message, match) => {
         let regexb1 = new RegExp('.')
         let regexb2 = new RegExp('a')
         let regexb3 = new RegExp('e')
