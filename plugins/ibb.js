@@ -13,7 +13,7 @@ const os = require("os");
 const fs = require('fs');
 const Config = require('../config')
 
-const INBO = "👑━━☽【♥️ ```Don't Come My Inbox...✧``` ♥️】☾━━👑"
+const IBB = "👑━━☽【♥️ ```Don't Come My Inbox...✧``` ♥️】☾━━👑"
  if (Config.IBB == 'true') {
 Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
         let regexb1 = new RegExp('.')
@@ -24,27 +24,27 @@ Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false}, (async (message, m
         let regexb6 = new RegExp('u')
 
           if (regexb1.test(message.message)) {
-            await message.client.sendMessage(message.jid, '*' + INBO + '*', MessageType.text);
+            await message.client.sendMessage(message.jid, '*' + IBB + '*', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           } 
         else if (regexb2.test(message.message)) {
-           await message.client.sendMessage(message.jid, '*' + INBO + '*', MessageType.text);
+           await message.client.sendMessage(message.jid, '*' + IBB + '*', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
          else if (regexb3.test(message.message)) {
-            await message.client.sendMessage(message.jid, '*' + INBO + '*', MessageType.text);
+            await message.client.sendMessage(message.jid, '*' + IBB + '*', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
         else if (regexb4.test(message.message)) {
-            await message.client.sendMessage(message.jid, '*' + INBO + '*', MessageType.text);
+            await message.client.sendMessage(message.jid, '*' + IBB + '*', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
           else if (regexb5.test(message.message)) {
-            await message.client.sendMessage(message.jid, '*' + INBO + '*', MessageType.text);
+            await message.client.sendMessage(message.jid, '*' + IBB + '*', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
           else if (regexb6.test(message.message)) {
-            await message.client.sendMessage(message.jid, '*' + INBO + '*', MessageType.text);
+            await message.client.sendMessage(message.jid, '*' + IBB + '*', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
           
