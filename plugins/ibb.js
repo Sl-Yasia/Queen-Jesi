@@ -1,4 +1,4 @@
-/* Codded by @Sl-Yasia.
+/* Coded by @Sl-Yasia.
 
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
@@ -23,27 +23,27 @@ Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false, onlyPm: true}, (asy
         let regexb5 = new RegExp('o')
         let regexb6 = new RegExp('u')
 
-          if (regexb1.test(message.message)) {
+          if (regexb1.test(message.message)) {           
             await message.client.sendMessage(message.jid, '' + IBB + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           } 
-        else if (regexb2.test(message.message)) {
+        else if (regexb2.test(message.message)) {         
            await message.client.sendMessage(message.jid, '' + IBB + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
-         else if (regexb3.test(message.message)) {
+         else if (regexb3.test(message.message)) {          
             await message.client.sendMessage(message.jid, '' + IBB + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
-        else if (regexb4.test(message.message)) {
+        else if (regexb4.test(message.message)) {         
             await message.client.sendMessage(message.jid, '' + IBB + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
-          else if (regexb5.test(message.message)) {
+          else if (regexb5.test(message.message)) {           
             await message.client.sendMessage(message.jid, '' + IBB + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
-          else if (regexb6.test(message.message)) {
+          else if (regexb6.test(message.message)) {           
             await message.client.sendMessage(message.jid, '' + IBB + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
