@@ -22,6 +22,7 @@ const Language = require('../language');
 const Lang = Language.getString('ttp');
 
 var description = ''
+var new = ''
 var cmd = ''
 var cmd_desc = ''
 if (Config.LANG == 'EN') description = 'Shows all ttp commands.', new = '*👑【💗 𝓝𝓮𝔀 𝓢𝓽𝓲𝓬𝓴𝓮𝓻 𝓟𝓪𝓬𝓴 💗】👑*', cmd = '*⛱️ Command:* ', cmd_desc = '*❄️ Description:* '
