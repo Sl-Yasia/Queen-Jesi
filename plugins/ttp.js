@@ -26,7 +26,7 @@ var cmd = ''
 var cmd_desc = ''
 if (Config.LANG == 'EN') description = 'Shows all ttp commands.', cmd = '*Command:* ', cmd_desc = '*Description:* '
 
-Jesi.adCmd({ pattern: 'allttp$', fromMe: wk, desc: description }, (async (message, match) => {
+Jesi.adCmd({ pattern: 'jesittp$', fromMe: wk, desc: description }, (async (message, match) => {
   var t1 = Lang.TTP_DESC
   var t2 = Lang.ATTP_DESC
   var t3 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Converts text to water-themed sticker." : "Converts text to water-themed sticker."
@@ -64,7 +64,7 @@ Jesi.adCmd({ pattern: 'ttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (asyn
     await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: Config.CPK})
   }
 }));
-Jesi.adCmd({ pattern: 'attp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Jesi.adCmd({ pattern: 'attp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var uri = encodeURI(text)
@@ -77,7 +77,7 @@ Jesi.adCmd({ pattern: 'attp ?(.*)', fromMe: true, dontAddCommandList: true }, (a
     await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
   }
 }));
-Jesi.adCmd({ pattern: 'wttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Jesi.adCmd({ pattern: 'wttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await QueenJesiStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Water?_variations=true&text=', '&_loc=catdynamic')
@@ -110,7 +110,7 @@ Jesi.adCmd({ pattern: 'wttp ?(.*)', fromMe: true, dontAddCommandList: true }, (a
     })
   }
 }));
-Jesi.adCmd({ pattern: 'http ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Jesi.adCmd({ pattern: 'http ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await QueenJesiStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Style?_variations=true&text=', '&_loc=catdynamic')
@@ -143,7 +143,7 @@ Jesi.adCmd({ pattern: 'http ?(.*)', fromMe: true, dontAddCommandList: true }, (a
     })
   }
 }));
-Jesi.adCmd({ pattern: 'bttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Jesi.adCmd({ pattern: 'bttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await QueenJesiStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Blackbird?_variations=true&text=', '&_loc=catdynamic')
@@ -176,7 +176,7 @@ Jesi.adCmd({ pattern: 'bttp ?(.*)', fromMe: true, dontAddCommandList: true }, (a
     })
   }
 }));
-Jesi.adCmd({ pattern: 'gttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Jesi.adCmd({ pattern: 'gttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await QueenJesiStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Fluffy?_variations=true&text=', '&_loc=catdynamic')
@@ -209,7 +209,7 @@ Jesi.adCmd({ pattern: 'gttp ?(.*)', fromMe: true, dontAddCommandList: true }, (a
     })
   }
 }));
-Jesi.adCmd({ pattern: 'sttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Jesi.adCmd({ pattern: 'sttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await QueenJesiStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Smurfs?_variations=true&text=', '&_loc=catdynamic')
@@ -242,7 +242,7 @@ Jesi.adCmd({ pattern: 'sttp ?(.*)', fromMe: true, dontAddCommandList: true }, (a
     })
   }
 }));
-Jesi.adCmd({ pattern: 'ettp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Jesi.adCmd({ pattern: 'ettp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await QueenJesiStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Electric?_variations=true&text=', '&_loc=catdynamic')
@@ -275,7 +275,7 @@ Jesi.adCmd({ pattern: 'ettp ?(.*)', fromMe: true, dontAddCommandList: true }, (a
     })
   }
 }));
-Jesi.adCmd({ pattern: 'ahttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Jesi.adCmd({ pattern: 'ahttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await QueenJesiStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Highlight-Animation?_variations=true&text=', '&_loc=catdynamic')
@@ -308,7 +308,7 @@ Jesi.adCmd({ pattern: 'ahttp ?(.*)', fromMe: true, dontAddCommandList: true }, (
     })
   }
 }));
-Jesi.adCmd({ pattern: 'pttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Jesi.adCmd({ pattern: 'pttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await QueenJesiStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Memories-Animation?_variations=true&text=', '&_loc=catdynamic')
