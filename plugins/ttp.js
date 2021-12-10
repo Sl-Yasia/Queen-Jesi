@@ -22,10 +22,10 @@ const Language = require('../language');
 const Lang = Language.getString('ttp');
 
 var description = ''
-var new = ''
+var yasi = ''
 var cmd = ''
 var cmd_desc = ''
-if (Config.LANG == 'EN') description = 'Shows all ttp commands.', new = '*👑【💗 𝓝𝓮𝔀 𝓢𝓽𝓲𝓬𝓴𝓮𝓻 𝓟𝓪𝓬𝓴 💗】👑*', cmd = '*⛱️ Command:* ', cmd_desc = '*❄️ Description:* '
+if (Config.LANG == 'EN') description = 'Shows all ttp commands.', yasi = '*👑【💗 𝓝𝓮𝔀 𝓢𝓽𝓲𝓬𝓴𝓮𝓻 𝓟𝓪𝓬𝓴 💗】👑*', cmd = '*⛱️ Command:* ', cmd_desc = '*❄️ Description:* '
 
 Jesi.adCmd({ pattern: 'allttp$', fromMe: wk, desc: description }, (async (message, match) => {
   var t1 = Lang.TTP_DESC
@@ -39,7 +39,7 @@ Jesi.adCmd({ pattern: 'allttp$', fromMe: wk, desc: description }, (async (messag
   var t9 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Converts text to highlighted animated sticker." : "Converts text to highlighted animated sticker."
   var t10 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Converts text to transition animated sticker." : "Converts text to transition animated sticker."
   
-  var payload = new + '\n\n' +
+  var payload = yasi + '\n\n' +
     cmd + '.ttp' + '\n' + cmd_desc + t1 + '\n\n' +
     cmd + '.attp' + '\n' + cmd_desc + t2 + '\n\n' +
     cmd + '.wttp' + '\n' + cmd_desc + t3 + '\n\n' +
