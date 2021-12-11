@@ -7,14 +7,14 @@ Queen-Jesi - Sl-Yasia
 */
 
 const Jesi = require('../events');
-const {MessageType} = require('@adiwajshing/baileys');
+const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const exec = require('child_process').exec;
 const os = require("os");
 const fs = require('fs');
 const Config = require('../config')
 const INBOX = "👑━━☽【♥️ ```Don't Come My Inbox...✧``` ♥️】☾━━👑"
 
-if (Config.IBB == 'true' && message.jid !== '94741845737-1616356915@g.us') {
+if (Config.IBB == 'true') {
 Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false, onlyPm: true }, (async (message, match) => {
         let regexb1jesi = new RegExp('.')
         let regexb2jesi = new RegExp('a')
