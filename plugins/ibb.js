@@ -13,43 +13,42 @@ const os = require("os");
 const fs = require('fs');
 const Config = require('../config')
 
-const IBB = "👑━━☽【♥️ ```Don't Come My Inbox...✧``` ♥️】☾━━👑"
+const INBOX = "👑━━☽【♥️ ```Don't Come My Inbox...✧``` ♥️】☾━━👑"
  if (Config.IBB == 'true') {
-Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false, onlyPm: true}, (async (message, match) => {
-        let regexb1 = new RegExp('.')
-        let regexb2 = new RegExp('a')
-        let regexb3 = new RegExp('e')
-        let regexb4 = new RegExp('i')
-        let regexb5 = new RegExp('o')
-        let regexb6 = new RegExp('u')
-
-          if (regexb1.test(message.message)) {           
-            await message.client.sendMessage(message.jid, '' + IBB + '', MessageType.text);
+Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false, onlyPm: true }, (async (message, match) => {
+        let regexb1jesi = new RegExp('.')
+        let regexb2jesi = new RegExp('a')
+        let regexb3jesi = new RegExp('e')
+        let regexb4jesi = new RegExp('i')
+        let regexb5jesi = new RegExp('o')
+        let regexb6jesi = new RegExp('u')
+// Inbox Blocking System
+          if (regexb1jesi.test(message.message)) {           
+            await message.client.sendMessage(message.jid, '' + INBOX + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           } 
-        else if (regexb2.test(message.message)) {         
-           await message.client.sendMessage(message.jid, '' + IBB + '', MessageType.text);
+        else if (regexb2jesi.test(message.message)) {         
+            await message.client.sendMessage(message.jid, '' + INBOX + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
-         else if (regexb3.test(message.message)) {          
-            await message.client.sendMessage(message.jid, '' + IBB + '', MessageType.text);
+         else if (regexb3jesi.test(message.message)) {          
+            await message.client.sendMessage(message.jid, '' + INBOX + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
-        else if (regexb4.test(message.message)) {         
-            await message.client.sendMessage(message.jid, '' + IBB + '', MessageType.text);
+        else if (regexb4jesi.test(message.message)) {         
+            await message.client.sendMessage(message.jid, '' + INBOX + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
-          else if (regexb5.test(message.message)) {           
-            await message.client.sendMessage(message.jid, '' + IBB + '', MessageType.text);
+          else if (regexb5jesi.test(message.message)) {           
+            await message.client.sendMessage(message.jid, '' + INBOX + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
-          else if (regexb6.test(message.message)) {           
-            await message.client.sendMessage(message.jid, '' + IBB + '', MessageType.text);
+          else if (regexb6jesi.test(message.message)) {           
+            await message.client.sendMessage(message.jid, '' + INBOX + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
           
 }));
-
 
 }
      
