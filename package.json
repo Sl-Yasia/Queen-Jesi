@@ -1,6 +1,6 @@
 {
   "name": "queen-jesi",
-  "version": "1.2.9",
+  "version": "1.3.0",
   "description": "QueenJesi project - a Whatsapp userbot helping to improve your Whatsapp experience.",
   "main": "./Queen-Jesi/bot.js",
   "scripts": {
@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/Sl-Yasia/Queen-Jesi#readme",
   "dependencies": {
-    "queenjesi-npm": "^1.0.4"
+    "queenjesi-npm": "^1.0.5"
   }
 }
