@@ -19,7 +19,7 @@ const Lang = Language.getString('scrapers');
 if (Config.WORKTYPE == 'private') {
 Jesi.adCmd({pattern: 'device ?(.*)', fromMe: true, desc: DEV , dontAddCommandList: true }, async (message, match) => {
     
-const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=a9a05974d30e`)
+const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=530eeb16e9`)
 const { status, result } = data
 if(!status) return await message.sendMessage('not found')
 await message.client.sendMessage(message.jid, LOAD_ING , MessageType.text, { quoted: message.data });
@@ -36,7 +36,7 @@ msg += `CPU            :${result.chipset}\n\n`
 msg += `INCH           :${result.inchi}\n\n`
 msg += `VIDEO MP       :${result.videoPixel}\n\n`
 msg += `PIC            :${result.thumb}\n\n`
-msg += `BATTERY BRAND  :${result.pixel}\n\n`
+msg += `CAMERA MP      :${result.pixel}\n\n`
 msg += '```'
  return await message.client.sendMessage(message.jid, msg, MessageType.text, { quoted: message.data });
 });
@@ -44,7 +44,7 @@ msg += '```'
 else if (Config.WORKTYPE == 'public') {
     Jesi.adCmd({pattern: 'device ?(.*)', fromMe: false, desc: DEV , dontAddCommandList: true }, async (message, match) => {
     
-        const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=a9a05974d30e`)
+        const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=530eeb16e9`)
         const { status, result } = data
         if(!status) return await message.sendMessage('not found')
         await message.client.sendMessage(message.jid, LOAD_ING , MessageType.text, { quoted: message.data });
@@ -61,7 +61,7 @@ else if (Config.WORKTYPE == 'public') {
         msg += `INCH           :${result.inchi}\n\n`
         msg += `VIDEO MP       :${result.videoPixel}\n\n`
         msg += `PIC            :${result.thumb}\n\n`
-        msg += `BATTERY BRAND  :${result.pixel}\n\n`
+        msg += `CAMERA MP      :${result.pixel}\n\n`
         msg += '```'
          return await message.client.sendMessage(message.jid, msg, MessageType.text, { quoted: message.data });
         });
