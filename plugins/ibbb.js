@@ -23,7 +23,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         l_dsc = 'Inbox Blocking System'
         alr_on = '*Inbox Blocking System Already Open!*'
         alr_off = '*Inbox Blocking System is Currently Closed!*'
-        BGM_on = '*Inbox Blocking System Open Successfully 🛡️*️'
+        BGM_on = '*Inbox Blocking System Open Successfully 🎭*️'
         BGM_off = '*Inbox Blocking System Close Successfully ♥️*'
     }
     Jesi.adCmd({pattern: 'inbox ?(.*)', fromMe: true, desc: l_dsc, usage: '.inbox on / off' }, (async (message, match) => {
