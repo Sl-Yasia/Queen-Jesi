@@ -12,10 +12,10 @@ const exec = require('child_process').exec;
 const os = require("os");
 const fs = require('fs');
 const Config = require('../config')
-const INBOX = "👑━━☽【♥️ ```Don't Come My Inbox...✧``` ♥️】☾━━👑"
 
+const INBOX = "♥️```Don't Come My Inbox...✧```♥️"
 if (Config.IBB == 'true') {
-Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false, onlyPm: true }, (async (message, match) => {
+Jesi.adCmd({on: 'text', fromMe: false, onlyPm: true }, (async (message, match) => {
         let regexb1jesi = new RegExp('.')
         let regexb2jesi = new RegExp('a')
         let regexb3jesi = new RegExp('e')
@@ -27,15 +27,15 @@ Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false, onlyPm: true }, (as
             await message.client.sendMessage(message.jid, '' + INBOX + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           } 
-        else if (regexb2jesi.test(message.message)) {         
+          else if (regexb2jesi.test(message.message)) {         
             await message.client.sendMessage(message.jid, '' + INBOX + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
-         else if (regexb3jesi.test(message.message)) {          
+          else if (regexb3jesi.test(message.message)) {          
             await message.client.sendMessage(message.jid, '' + INBOX + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
-        else if (regexb4jesi.test(message.message)) {         
+          else if (regexb4jesi.test(message.message)) {         
             await message.client.sendMessage(message.jid, '' + INBOX + '', MessageType.text);
             await message.client.blockUser(message.jid, "add");
           }
@@ -49,6 +49,7 @@ Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false, onlyPm: true }, (as
           }
           
 }));
+
 
 }
      
