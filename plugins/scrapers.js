@@ -1,4 +1,4 @@
-/* Copyright (C) 2021 Sl-Yasia.
+/* Copyright (C) 2022 Sl-Yasia.
 
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
@@ -416,7 +416,6 @@ if (config.WORKTYPE == 'private') {
         });
 
         await message.client.sendMessage(message.jid,mesaj,MessageType.text);
-        await reply.delete();
     }));
 
     Jesi.adCmd({pattern: 'wiki ?(.*)', fromMe: true, desc: Lang.WIKI_DESC}, (async (message, match) => { 
@@ -429,7 +428,6 @@ if (config.WORKTYPE == 'private') {
 
         var info = await arama.rawContent();
         await message.client.sendMessage(message.jid, info, MessageType.text);
-        await reply.delete();
     }));
 
     Jesi.adCmd({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
@@ -1029,7 +1027,6 @@ else if (config.WORKTYPE == 'public') {
         });
 
         await message.client.sendMessage(message.jid,mesaj,MessageType.text);
-        await reply.delete();
     }));
 
     Jesi.adCmd({pattern: 'wiki ?(.*)', fromMe: false, desc: Lang.WIKI_DESC}, (async (message, match) => { 
@@ -1042,7 +1039,7 @@ else if (config.WORKTYPE == 'public') {
 
         var info = await arama.rawContent();
         await message.client.sendMessage(message.jid, info, MessageType.text);
-        await reply.delete();
+     
     }));
 
     Jesi.adCmd({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
