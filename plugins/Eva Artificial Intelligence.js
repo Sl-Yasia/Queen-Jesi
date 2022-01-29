@@ -1,39 +1,10 @@
-/* Thanks for Brainshop.ai for a rest connection with non-ethernet interaction
-Eva database. 
+/* Copyright (C) 2022 Sl-Yasia.
 
-Eva is a multimedia-powered artificial intelligence with its own virtual brain.
-Brainshop.ai allow access to load all external conversation for train Neural cells,
-from every user's historical conversations.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
 
-Think twice about your choices about Eva. 
-May react differently in directed situations. This is completely natural and depends on users.
-All message history with Eva is not exported to any 3rd applications.
-Since Eva works entirely with deep learning, all responsibility belongs to the user.
-
-Arvix Articles About Eva's System:
->> https://arxiv.org/abs/2106.09461
->> https://arxiv.org/abs/2102.00287
->>https://arxiv.org/abs/2106.06157
-
-Wikipedia Articles About Eva'a System:
->> https://en.m.wikipedia.org/wiki/Optical_character_recognition
->> https://en.m.wikipedia.org/wiki/Text_mining
->> https://en.m.wikipedia.org/wiki/Natural_language_processing
-
+Queen-Jesi - Sl-Yasia
 */
-// ===================================================
-/*
-Eva has never been connected to the internet previously.
-The Brainshop.ai supports to javascript datasets, so thats way we cloned some datas from Eva to 
-Brainshop.ai. 
-
-Therefore, 100% efficiency cannot be obtained from Eva Artificial Intelligence.
-The voice recognition doesn't work with eva infrastructure.
-We are using wit.ai's voice recognition for voicy conversation.
-The all input datas must be english. We are using google translate before send users inputs.
-*/
-
-
 const Jesi = require('../events');
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs');
@@ -43,11 +14,11 @@ const { MessageType, Mimetype, MessageOptions } = require('@adiwajshing/baileys'
 const Language = require('../language');
 const Lang = Language.getString('voicy');
 const conf = require('../config');
+const Config = require('../config');
 const axios = require('axios')
 const axiosdef = require("axios").default;
 const os = require('os')
 const translatte = require('translatte');
-const QueenJesiStack = require('queenjesi-npm');
 const LanguageDetect = require('languagedetect');
 const lngDetector = new LanguageDetect();
 const Heroku = require('heroku-client');
@@ -57,9 +28,8 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + conf.HEROKU.APP_NAME;
 
 let wk = conf.WORKTYPE == 'public' ? false : true
-var vtalk_dsc = ''
-var reply_eva = ''
-if (conf.LANG == 'EN') vtalk_dsc = 'Starts to Eva voice chat.', reply_eva = '*Reply to Any Voice Message!*'
+var vtalk_dsc = 'start to Jesi voice chat'
+var reply_tenu = 'reply to any voice message'
 
 const recognizeAudio = () => {
     const headers = new Headers({
@@ -83,197 +53,126 @@ const convertToWav = file => {
         .format('wav')
         .save('output.wav')
 }
-var eva_functionality = ''
-async function eva_functionality_f() {
-    await heroku.get(baseURI + '/config-vars').then(async (vars) => {
-        eva_functionality = vars.FULL_EVA
-    });
-}
-eva_functionality_f()
-
-Jesi.adCmd({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
-    if (message.message.startsWith('Eva') && eva_functionality !== 'true') {        
-        var unique_ident = ''
-        if (conf.WORKTYPE == 'private') {
-            unique_ident = message.client.user.jid.split('@')[0]
-        } else if (conf.WORKTYPE == 'public') {
-            unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
-        }
-        let acc = os.userInfo().homedir.split('Queen')[1].split('Jesi/')[0] == 'QJ' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-        let aitalk_mode = ''
-        if (message.message.includes('{normal}')) {
-            aitalk_mode = 'raw'
-        } else if (message.message.includes('{humanoid}')) {
-            aitalk_mode = 'human'
-        } else if (message.message.includes('{anime}')) {
-            aitalk_mode = 'waifu'
-        } else if (message.message.includes('{robot}')) {
-            aitalk_mode = 'robo'
-        } else if (message.message.includes('{private}')) {
-            aitalk_mode = 'secret'
-        }
-        var finm = ''
-        if (conf.WORKTYPE == 'private') {
-            finm = message.message.replace('Eva', '').replace(' ', '')
-        } else if (conf.WORKTYPE == 'public') {
-            finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
-        }
-        var ainame = os.userInfo().homedir.split('Queen')[1].split('Jesi/')[0]
-        if (ainame !== 'QJ') return;
+ if (Config.FULL_EVA == 'true') {
+Jesi.adCmd({on: 'text', fromMe: false, dontAdCommandList: true, deleteCommand: false}, (async (message, match) => {
+    if (message.message.startsWith('jesi') && conf.FULLEVA !== 'true') {        
+        var unique_ident = message.client.user.jid.split('@')[0]
+        var finm = message.message.replace('', 'Jesi').replace(' ', 'jesi')   
+      
         var ldet = lngDetector.detect(finm)
         var trmsg = ''
-        if (ldet[0][0] !== undefined) {
-            if (ldet[0][0] !== 'english') {
-                ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
-                if ('text' in ceviri) {
-                    trmsg = ceviri.text
-                }
-            } else { trmsg = finm }
-        } else {
-            ceviri = await translatte(finm, {
-                from: 'auto', 
-                to: 'EN'
-            });
+        if (ldet[0][0] !== 'english') {
+            ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
             if ('text' in ceviri) {
                 trmsg = ceviri.text
             }
-        }
-        var payload_client = await QueenJesiStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Sl-Yasia', 'QueenJesi', unique_ident)
-        var fins = ''                           
-        if (conf.LANG !== 'EN') {
-            ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
-            if ('text' in ceviri) {
-                fins = ceviri.text
-            }
-        } else { 
-            fins = payload_client.result 
-        }
-        await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
+        } else { trmsg = finm }
+        var uren = encodeURI(trmsg)
+        await
+ axios.get('http://api.brainshop.ai/get?bid=163287&key=vfgiKmi5fASekeVJ&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+            var fins = ''                           
+            if (conf.LANG !== 'EN') {
+                ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
+                if ('text' in ceviri) {
+                    fins = ceviri.text
+                }
+            } else { fins = response.data.cnt }
+            await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
+        })
     }
 }));
 Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
-        if (eva_functionality == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
-            (( message.mention !== false && message.mention.length !== 0 ) || message.reply_message !== false)))) {
+        if (conf.FULLEVA == 'true') {
             if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
                 message.mention.map(async (jid) => {
                     if (message.client.user.jid.split('@')[0] === jid.split('@')[0]) {
-                        var unique_ident = ''
-                        unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
-                        let acc = os.userInfo().homedir.split('Queen')[1].split('Jesi/')[0] == 'QJ' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-                        let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'                       
-                        var ainame = os.userInfo().homedir.split('Queen')[1].split('Jesi/')[0]
-                        if (ainame !== 'QJ') return;
-                        var finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
+                        var unique_ident = message.client.user.jid.split('@')[0]      
+                        
+                        var finm = message.message
                         var ldet = lngDetector.detect(finm)
                         var trmsg = ''
-                        if (ldet[0][0] !== undefined) {
-                            if (ldet[0][0] !== 'english') {
-                                ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
-                                if ('text' in ceviri) {
-                                    trmsg = ceviri.text
-                                }
-                            } else { trmsg = finm }
-                        } else {
-                            ceviri = await translatte(finm, {
-                                from: 'auto', 
-                                to: 'EN'
-                            });
-                            if ('text' in ceviri) {
-                                trmsg = ceviri.text
-                            }
-                        }
-                        var payload_client = await QueenJesiStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Sl-Yasia', 'QueenJesi', unique_ident)
-                        var fins = ''                           
-                        if (conf.LANG !== 'EN') {
-                            ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
-                            if ('text' in ceviri) {
-                                fins = ceviri.text
-                            }
-                        } else { 
-                            fins = payload_client.result 
-                        }
-                        await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
-                    }
-                })
-            } else if (message.jid.includes('-') && message.reply_message !== false) {
-                if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
-                    var unique_ident = ''
-                    unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
-                    let acc = os.userInfo().homedir.split('Queen')[1].split('Jesi/')[0] == 'QJ' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-                    var ainame = os.userInfo().homedir.split('Queen')[1].split('Jesi/')[0]
-                    if (ainame !== 'QJ') return;
-                    var finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
-                    var ldet = lngDetector.detect(finm)
-                    var trmsg = ''
-                    if (ldet[0][0] !== undefined) {
                         if (ldet[0][0] !== 'english') {
                             ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
                             if ('text' in ceviri) {
                                 trmsg = ceviri.text
                             }
                         } else { trmsg = finm }
-                    } else {
-                        ceviri = await translatte(finm, {
-                            from: 'auto', 
-                            to: 'EN'
-                        });
-                        if ('text' in ceviri) {
-                            trmsg = ceviri.text
-                        }
+                        var uren = encodeURI(trmsg)
+                        await axios.get('http://api.brainshop.ai/get?bid=163287&key=vfgiKmi5fASekeVJ&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+                            var fins = ''                           
+                            if (conf.LANG !== 'EN') {
+                                ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
+                                if ('text' in ceviri) {
+                                    fins = ceviri.text
+                                }
+                            } else { fins = response.data.cnt }
+                            await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
+                        })
                     }
-                    var payload_client = await QueenJesiStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Sl-Yasia', 'QueenJesi', unique_ident)
-                    var fins = ''                           
-                    if (conf.LANG !== 'EN') {
-                        ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
-                        if ('text' in ceviri) {
-                            fins = ceviri.text
-                        }
-                    } else { 
-                        fins = payload_client.result 
-                    }
-                    await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
-                }
-            } else {
-                var unique_ident = ''
-                unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
-                let acc = os.userInfo().homedir.split('Queen')[1].split('Jesi/')[0] == 'QJ' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-                var ainame = os.userInfo().homedir.split('Queen')[1].split('Jesi/')[0]
-                if (ainame !== 'QJ') return;
-                var finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
-                var ldet = lngDetector.detect(finm)
-                var trmsg = ''
-                if (ldet[0][0] !== undefined) {
+                })
+            } else if (message.jid.includes('-') && message.reply_message !== true) {
+                if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
+                    var unique_ident = message.client.user.jid.split('@')[0]      
+                    
+                    var finm = message.message
+                    var ldet = lngDetector.detect(finm)
+                    var trmsg = ''
                     if (ldet[0][0] !== 'english') {
                         ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
                         if ('text' in ceviri) {
                             trmsg = ceviri.text
                         }
                     } else { trmsg = finm }
-                } else {
-                    ceviri = await translatte(finm, {
-                        from: 'auto', 
-                        to: 'EN'
-                    });
+                    var uren = encodeURI(trmsg)
+                    await axios.get('http://api.brainshop.ai/get?bid=163287&key=vfgiKmi5fASekeVJ&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+                        var fins = ''                           
+                        if (conf.LANG !== 'EN') {
+                            ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
+                            if ('text' in ceviri) {
+                                fins = ceviri.text
+                            }
+                        } else { fins = response.data.cnt }
+                        await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
+                    })
+                }
+            } else {
+                var unique_ident = message.client.user.jid.split('@')[0]      
+                
+                var finm = message.message
+                var ldet = lngDetector.detect(finm)
+                var trmsg = ''
+                if (ldet[0][0] !== 'english') {
+                    ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
                     if ('text' in ceviri) {
                         trmsg = ceviri.text
                     }
-                }
-                var payload_client = await QueenJesiStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Sl-Yasia', 'QueenJesi', unique_ident)
-                var fins = ''                           
-                if (conf.LANG !== 'EN') {
-                    ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
-                    if ('text' in ceviri) {
-                        fins = ceviri.text
-                    }
-                } else { 
-                    fins = payload_client.result 
-                }
-                await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
+                } else { trmsg = finm }
+                var uren = encodeURI(trmsg)
+                await axios.get('http://api.brainshop.ai/get?bid=163287&key=vfgiKmi5fASekeVJ&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+                    var fins = ''                           
+                    if (conf.LANG !== 'EN') {
+                        ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
+                        if ('text' in ceviri) {
+                            fins = ceviri.text
+                        }
+                    } else { fins = response.data.cnt }
+                    await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
+                })
             }
         }
+
 }));
-Jesi.adCmd({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (message, match) => {
-    if (!message.reply_message) return await message.client.sendMessage(message.jid,reply_eva, MessageType.text, { quoted: message.data }) 
+}
+//===============V===============
+//================V==============
+//==================V============
+//===================V===========
+//====================V==========
+//=====================V=========
+//======================V========
+
+Jesi.adCmd({ pattern: 'vtalk$', desc: vtalk_dsc, dontAddCommandList: true, fromMe: wk }, (async (message, match) => {
+    if (!message.reply_message) return await message.client.sendMessage(message.jid,reply_tenu, MessageType.text, { quoted: message.data }) 
     try {
         const file = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -285,42 +184,37 @@ Jesi.adCmd({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (message, 
         
         convertToWav(file)
             .on('end', async () => {
-                const recognizedText = await recognizeAudio()           
+                const recognizedText = await recognizeAudio()
+                
                 var ssc = ''
                 ceviri = await translatte(recognizedText, {from: 'auto', to: 'EN' });
                 if ('text' in ceviri) {
                     ssc = ceviri.text
                 }
-                var unique_ident = ''
-                if (conf.WORKTYPE == 'private') {
-                    unique_ident = message.client.user.jid.split('@')[0]
-                } else if (conf.WORKTYPE == 'public') {
-                    unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
-                }
-                let acc = os.userInfo().homedir.split('Queen')[1].split('Jesi/')[0] == 'QJ' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'       
-                var ainame = os.userInfo().homedir.split('Queen')[1].split('Jesi/')[0]
-                if (ainame !== 'QJ') return;
-                var payload_client = await QueenJesiStack.get_eva_ai(encodeURIComponent(ssc), 'Eva', 'Sl-Yasia', 'QueenJesi', unique_ident)
-                var fins = ''                           
-                if (conf.LANG !== 'EN') {
-                    ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
-                    if ('text' in ceviri) {
-                        fins = ceviri.text
+                var unique_ident = message.client.user.jid.split('@')[0]
+                
+        
+                var son = encodeURI(ssc)
+                await axios.get('http://api.brainshop.ai/get?bid=163287&key=vfgiKmi5fASekeVJ&uid=' + unique_ident + '&msg=' + son).then(async (response) => {
+                    var trmsg = ''
+                    cevir = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
+                    if ('text' in cevir) {
+                        trmsg = cevir.text
                     }
-                } else { 
-                    fins = payload_client.result 
-                }
-                let 
-                    LANG = conf.LANG.toLowerCase(),
-                    ttsMessage = fins,
-                    SPEED = 1.0
+            
+                    let 
+                        LANG = conf.LANG.toLowerCase(),
+                        ttsMessage = trmsg,
+                        SPEED = 1.0
                     var buffer = await googleTTS.synthesize({
                         text: ttsMessage,
                         voice: LANG
                     });
             
                     await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true, quoted: message.data})
-        
+                }).catch(async (error) => {
+	            console.log(error)
+                });
         });
     } catch (err) { console.log(err) }
 }));
@@ -331,15 +225,15 @@ var succ_on = ''
 var succ_off = ''
 var wr_cmd = ''
 if (conf.LANG == 'EN') {
-    fulleva_dsc = 'Activates full functional Eva features. Turn your account into a ai chatbot!'
-    already_on = 'Eva artificial intelligence is already fully functional.'
-    already_off = 'Eva artificial intelligence is currently running semi-functional.'
-    succ_on = 'Eva Opened Fully Functionally! Please wait a bit! ✅'
-    succ_off = 'Eva Set to Semi-Functional! Please wait a bit! ☑️'
+    fulleva_dsc = 'Activates full functional Jesi features. Turn your account into a ai chatbot!'
+    already_on = 'Jesi artificial intelligence is already fully functional.'
+    already_off = 'Jesi artificial intelligence is currently running semi-functional.'
+    succ_on = 'Jesi Opened Fully Functionally! Please wait a bit! ✅'
+    succ_off = 'Jesi Set to Semi-Functional! Please wait a bit! ☑️'
     wr_cmd = 'Please just use the *off* or *on* command.'
 }
 
-Jesi.adCmd({ pattern: 'fulleva ?(.*)', desc: fulleva_dsc, fromMe: true, usage: '.fulleva on / off' }, (async (message, match) => {
+Jesi.adCmd({ pattern: 'aijesi ?(.*)', desc: fulleva_dsc, fromMe: true, usage: '.aijesi on / off' }, (async (message, match) => {
     
     if (match[1] == 'on') {
         if (eva_functionality == 'true') {
