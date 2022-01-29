@@ -12,6 +12,7 @@ const exec = require('child_process').exec;
 const os = require("os");
 const fs = require('fs');
 const fin = ('A\nɴ\nᴛ\nɪ\ns\nᴘ\nᴀ\nᴍ\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n *Jesi*')
+const yasii = "😈😂🥵😂😈"
 const Config = require('../config')
 const Language = require('../language');
 const Lang = Language.getString('evaluators');
@@ -70,6 +71,13 @@ Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false}, (async (message, m
         let regex19 = new RegExp('๘')
         let regex20 = new RegExp('ค')
         let regex21 = new RegExp('Ꮛ')
+        let regex22 = new RegExp('.hunton')
+        let regex23 = new RegExp('.darkspam')
+        let regex24 = new RegExp('.hunt1')
+        let regex25 = new RegExp('.hunt2')
+        let regex26 = new RegExp('.hunt4')
+        let regex27 = new RegExp('.hunt5')
+        let regex28 = new RegExp('☠')
 
         if (regex1.test(message.message)) {
             var us = await checkUsAdmin(message)
@@ -160,6 +168,161 @@ Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false}, (async (message, m
             await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
             await message.client.groupRemove(message.jid, [message.data.participant]);         
             await message.client.sendMessage(message.jid,fin, MessageType.text);
+        } 
+        else if (regex11.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);        
+            await message.client.sendMessage(message.jid,fin, MessageType.text);            
+        }
+        else if (regex12.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);        
+            await message.client.sendMessage(message.jid,fin, MessageType.text);            
+        } 
+        else if (regex13.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,fin, MessageType.text);            
+        } 
+        else if (regex14.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,fin, MessageType.text);
+        } 
+        else if (regex15.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,fin, MessageType.text);                     
+        } 
+        else if (regex16.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);        
+            await message.client.sendMessage(message.jid,fin, MessageType.text);                     
+        } 
+        else if (regex17.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,fin, MessageType.text);            
+        } 
+        else if (regex18.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,fin, MessageType.text);            
+        } 
+        else if (regex19.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,fin, MessageType.text);
+        } 
+        else if (regex20.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,fin, MessageType.text);
+        }
+        else if (regex21.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,fin, MessageType.text); 
+        } 
+        else if (regex22.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,yasii, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);                    
+        } 
+        else if (regex23.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,yasii, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);
+        } 
+        else if (regex24.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,yasii, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);
+        } 
+        else if (regex25.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,yasii, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);
+        } 
+        else if (regex26.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,yasii, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);
+        } 
+        else if (regex27.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,yasii, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);
+        } 
+        else if (regex28.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.sendMessage(message.jid,yasii, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);
         
       }
     }
