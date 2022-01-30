@@ -38,6 +38,7 @@ module.exports = {
     SONG_DL: process.env.SONGDOWN_MSG === undefined ? '*Downloding Your Song...*' : process.env.SONGDOWN_MSG,
     IBB: process.env.INBOX_BLOCK === undefined ? 'false' : process.env.INBOX_BLOCK,
     VIRUSKICK: process.env.SPAM_KICK === undefined ? 'false' :process.env.SPAM_KICK,
+    BADKICK: process.env.BAD_KICK === undefined ? 'false' :process.env.BAD_KICK,
     KICKMEMSG: process.env.KICKME_MESSAGE === undefined ? 'default' : process.env.KICKME_MESSAGE,
     BLOCKCHAT: process.env.BLOCK_CHAT === undefined ? false : process.env.BLOCK_CHAT,
     ADDMSG: process.env.ADD_MESSAGE === undefined ? 'default' : process.env.ADD_MESSAGE,
