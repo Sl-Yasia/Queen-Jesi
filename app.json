@@ -114,6 +114,11 @@
             "required": false,
             "value": "false"
         },
+        "BAD_KICK": {
+            "description": "Remove Badword Senders from the Group.",
+            "required": false,
+            "value": "false"
+        },
         "INBOX_BLOCK": {
             "description": "Automatic Block Inbox Message Senders.",
             "required": false,
