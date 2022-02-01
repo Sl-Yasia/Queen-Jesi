@@ -2,7 +2,7 @@
   "name": "Queen-Jesi",
   "version": "2.0.0",
   "description": "QueenJesi project - a Whatsapp userbot helping to improve your Whatsapp experience.",
-  "main": "./Queen-Jesi/bot.js",
+  "main": "./Queen-Jesi/jesi.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
