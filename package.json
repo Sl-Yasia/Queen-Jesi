@@ -4,7 +4,7 @@
   "description": "QueenJesi project - a Whatsapp userbot helping to improve your Whatsapp experience.",
   "main": "./Queen-Jesi/jesi.js",
   "scripts": {
-    "start": "supervisor -s bot.js"
+    "start": "supervisor -s jesi.js"
   },
   "repository": {
     "type": "git",
