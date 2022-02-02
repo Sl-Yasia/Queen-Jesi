@@ -42,7 +42,7 @@ msg += '```'
 });
 }
 else if (Config.WORKTYPE == 'public') {
-    Jesi.adCmd({pattern: 'device ?(.*)', fromMe: false, desc: DEV , dontAddCommandList: true }, async (message, match) => {
+    Jesi.adCmd({pattern: '2device ?(.*)', fromMe: false, desc: DEV , dontAddCommandList: true }, async (message, match) => {
     
         const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=530eeb16e9`)
         const { status, result } = data
