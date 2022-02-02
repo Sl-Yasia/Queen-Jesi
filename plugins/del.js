@@ -13,7 +13,7 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('admin');
 const mut = Language.getString('mute');
-const END = "Clear all messages"
+const END = "Deleate all the messages from the chat."
 
 async function checkImAdmin(message, user = message.client.user.jid) {
     var grup = await message.client.groupMetadata(message.jid);
@@ -23,7 +23,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-Jesi.adCmd({pattern: 'del', fromMe: true, desc: END, dontAddCommandList: true}, (async (message, match) => {
+Jesi.adCmd({pattern: 'del', fromMe: true, desc: END}, (async (message, match) => {
 
     await message.sendMessage('```🚀 Cleaning chat...```');
     await message.client.modifyChat (message.jid, ChatModification.delete);
