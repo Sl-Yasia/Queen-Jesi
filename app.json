@@ -157,6 +157,16 @@
             "required": false,
             "value": "𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠... 📲"
         },
+        "VIDEODOWN_MSG": {
+            "description": "Video Download Text.",
+            "required": false,
+            "value": "𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐢𝐧𝐠 𝐘𝐨𝐮𝐫 𝐕𝐢𝐝𝐞𝐨... 🎬"
+        },
+        "VIDEOUP_MSG": {
+            "description": "Video Upload Text.",
+            "required": false,
+            "value": "𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠... 📲"
+        },
         "ALIVE_MESSAGE": {
             "description": "Customizable Alive Message! Use => default, to Change back.",
             "required": false,
