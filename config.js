@@ -36,6 +36,8 @@ module.exports = {
     BYE_GIF: process.env.GOODBYE_GIF === undefined ? 'https://telegra.ph/file/3628de591df2f2b1e91ee.mp4' : process.env.GOODBYE_GIF,
     SONG_UP: process.env.SONGUP_MSG === undefined ? '*Uploading Your Song...*' : process.env.SONGUP_MSG,
     SONG_DL: process.env.SONGDOWN_MSG === undefined ? '*Downloding Your Song...*' : process.env.SONGDOWN_MSG,
+    VID_UP: process.env.VIDEOUP_MSG === undefined ? '*Uploading Your Video...*' : process.env.VIDEOUP_MSG,
+    VID_DL: process.env.VIDEODOWN_MSG === undefined ? '*Downloding Your Video...*' : process.env.VIDEODOWN_MSG,
     IBB: process.env.INBOX_BLOCK === undefined ? 'false' : process.env.INBOX_BLOCK,
     VIRUSKICK: process.env.SPAM_KICK === undefined ? 'false' :process.env.SPAM_KICK,
     BADKICK: process.env.BAD_KICK === undefined ? 'false' :process.env.BAD_KICK,
