@@ -33,7 +33,7 @@
             "BANNED": "kicked out of the group!",
             "GIVE_ME_USER": "*😈 Give me a user!*",
             "ADD_DESC": "Adds someone to the group.",
-            "ADDED": "added to the group!",
+            "ADDED": "Added to the group! 🥰",
             "ALREADY_PROMOTED": "```How can I make someone admin who is already admin?```",
             "PROMOTED": "```, admin role was given!```",
             "PROMOTE_DESC": "Makes any person an admin.",
@@ -76,7 +76,7 @@
         },
         "heroku": {
             "RESTART_DESC": "Restart QueenJesi",
-            "RESTART_MSG": "```Restarting...```",
+            "RESTART_MSG": "*_Restarting..._* ♥️",
             "SHUTDOWN_DESC": "Shutdown QueenJesi",
             "SHUTDOWN_MSG": "```Shutting down ⛔```",
             "DYNO_DESC": "Check heroku dyno usage",
@@ -148,7 +148,7 @@
         },
         "profile": {
             "KICKME_DESC": "It kicks you from the group you are using it in.",
-            "KICKME": "```Bye bye! I am going 🤠```",
+            "KICKME": "```Bye bye! I am going 💞```",
             "PP_DESC": "Makes the profile photo what photo you reply.",
             "NEED_PHOTO": "*Give me a photo!*",
             "PPING": "```Setting profile photo...```",
@@ -158,7 +158,7 @@
             "UNBLOCKED": "unblocked",
             "BLOCKED_UPPER": "Blocked!",
             "UNBLOCKED_UPPER": "Unblocked.",
-            "NEED_USER": "Give me a user!",
+            "NEED_USER": "*Give me a user! 😇*",
             "JID_DESC": "Giving user's JID.",
             "JID": "```JID address of``` @{} ```: {}```",
             "JID_CHAT": "```Chat's JID address: {}```"
@@ -195,7 +195,7 @@
             "NEED_WORDS": "```Please write a few words!```",
             "GETTING_VIDEOS": "```👻 I'm bringing videos...```",
             "NOT_FOUND": "*I couldn't find anything :(*",
-            "SEARCHING": "* 🔎 Searching...*",
+            "SEARCHING": "*♥️ Searching...*",
             "WIKI_DESC": "Searches query on Wikipedia.",
             "IMG_DESC": "Searches for related pics on Google.",
             "IMG": "Uploading photo ```{}``` number ```{} ```..."
@@ -227,7 +227,7 @@
             "UPDATE": "*QueenJesi is completely up-to-date!*",
             "NEW_UPDATE": "*New update available for QueenJesi!*\n\nChanges:\n```",
             "UPDATE_NOW_DESC": "It makes updates.",
-            "UPDATING": "_Updating..._",
+            "UPDATING": "*❤️ *_Updating..._*",
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
             "UPDATED": "*✅ Successfully Updated!*",
             "UPDATED_LOCAL": "*✅ Successfully Updated!*",
