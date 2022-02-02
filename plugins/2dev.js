@@ -17,7 +17,7 @@ const Language = require('../language');
 const Lang = Language.getString('scrapers');
 
 if (Config.WORKTYPE == 'private') {
-Jesi.adCmd({pattern: 'device ?(.*)', fromMe: true, desc: DEV , dontAddCommandList: true }, async (message, match) => {
+Jesi.adCmd({pattern: '2device ?(.*)', fromMe: true, desc: DEV , dontAddCommandList: true }, async (message, match) => {
     
 const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=530eeb16e9`)
 const { status, result } = data
