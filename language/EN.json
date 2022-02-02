@@ -227,7 +227,7 @@
             "UPDATE": "*QueenJesi is completely up-to-date!*",
             "NEW_UPDATE": "*New update available for QueenJesi!*\n\nChanges:\n```",
             "UPDATE_NOW_DESC": "It makes updates.",
-            "UPDATING": "*❤️ *_Updating..._*",
+            "UPDATING": "*❤️ _Updating..._*",
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
             "UPDATED": "*✅ Successfully Updated!*",
             "UPDATED_LOCAL": "*✅ Successfully Updated!*",
