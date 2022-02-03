@@ -22,12 +22,11 @@ const Language = require('../language');
 const Lang = Language.getString('ttp');
 
 var description = ''
-var yasi = ''
 var cmd = ''
 var cmd_desc = ''
-if (Config.LANG == 'EN') description = 'Shows all ttp commands.', yasi = '*👑【💗 𝓝𝓮𝔀 𝓢𝓽𝓲𝓬𝓴𝓮𝓻 𝓟𝓪𝓬𝓴 💗】👑*', cmd = '*⛱️ Command:* ', cmd_desc = '*❄️ Description:* '
+if (Config.LANG == 'EN') description = 'New Sticker Pack.', cmd = '*⛱️ Command:* ', cmd_desc = '*♥️️ Description:* '
 
-Jesi.adCmd({ pattern: 'allttp$', fromMe: wk, desc: description }, (async (message, match) => {
+Jesi.adCmd({ pattern: 'spack$', fromMe: wk, desc: description }, (async (message, match) => {
   var t1 = Lang.TTP_DESC
   var t2 = Lang.ATTP_DESC
   var t3 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Converts text to water-themed sticker." : "Converts text to water-themed sticker."
@@ -39,8 +38,7 @@ Jesi.adCmd({ pattern: 'allttp$', fromMe: wk, desc: description }, (async (messag
   var t9 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Converts text to highlighted animated sticker." : "Converts text to highlighted animated sticker."
   var t10 = Config.LANG == 'TR' || Config.LANG == 'AZ' ? "Converts text to transition animated sticker." : "Converts text to transition animated sticker."
   
-  var payload = yasi + '\n\n' +
-    cmd + '.ttp' + '\n' + cmd_desc + t1 + '\n\n' +
+  var payload = cmd + '.ttp' + '\n' + cmd_desc + t1 + '\n\n' +
     cmd + '.attp' + '\n' + cmd_desc + t2 + '\n\n' +
     cmd + '.wttp' + '\n' + cmd_desc + t3 + '\n\n' +
     cmd + '.http' + '\n' + cmd_desc + t4 + '\n\n' +
@@ -51,8 +49,13 @@ Jesi.adCmd({ pattern: 'allttp$', fromMe: wk, desc: description }, (async (messag
     cmd + '.ettp' + '\n' + cmd_desc + t8 + '\n\n' +
     cmd + '.pttp' + '\n' + cmd_desc + t10
     
-  await message.client.sendMessage(message.jid,payload, MessageType.text)
-}));
+  var r_text = new Array ();
+        r_text[0] = "https://i.imgur.com/0RyEjSB.jpg" ;
+        r_text[1] = "https://i.imgur.com/0RyEjSB.jpg" ;
+        var i = Math.floor(2*Math.random())
+        var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
+        await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: msg + 'ᴘᴏᴡᴇʀᴅ ʙʏ ǫᴜᴇᴇɴ ᴊᴇsɪ'  })
+        }));
 Jesi.adCmd({ pattern: 'ttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
