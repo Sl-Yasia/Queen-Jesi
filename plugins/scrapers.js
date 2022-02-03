@@ -395,7 +395,7 @@ if (config.WORKTYPE == 'private') {
 
         yt.on('end', async () => {
             reply = await message.client.sendMessage(message.jid,config.VID_UP,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.document, {filename: title + '.mp4', mimetype: Mimetype.mp4,quoted: message.data});
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.document, {filename: VID + '.mp4', mimetype: Mimetype.mp4,quoted: message.data});
         });
     }));
 
@@ -1002,11 +1002,11 @@ else if (config.WORKTYPE == 'public') {
         var reply = await message.client.sendMessage(message.jid,config.VID_DL,MessageType.text);
 
         var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
-        yt.pipe(fs.createWriteStream('./' + title + '.mp4'));
+        yt.pipe(fs.createWriteStream('./' + VID + '.mp4'));
 
         yt.on('end', async () => {
             reply = await message.client.sendMessage(message.jid,config.VID_UP,MessageType.text);
-            await message.client.sendMessage(message.jid,fs.readFileSync('./' + title + '.mp4'), MessageType.document, {filename: title + '.mp4', mimetype: Mimetype.mp4,quoted: message.data});
+            await message.client.sendMessage(message.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.document, {filename: VID + '.mp4', mimetype: Mimetype.mp4,quoted: message.data});
         });
     }));
 
