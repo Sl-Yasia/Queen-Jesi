@@ -54,7 +54,7 @@ Jesi.adCmd({ pattern: 'spack$', fromMe: wk, desc: description }, (async (message
         r_text[1] = "https://i.imgur.com/0RyEjSB.jpg" ;
         var i = Math.floor(2*Math.random())
         var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
-        await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: payload + 'ᴘᴏᴡᴇʀᴅ ʙʏ ǫᴜᴇᴇɴ ᴊᴇsɪ'  })
+        await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: payload })
         }));
 Jesi.adCmd({ pattern: 'ttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
