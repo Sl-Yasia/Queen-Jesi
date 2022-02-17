@@ -150,7 +150,7 @@
         "MENU_NAME": {
             "description": "Customizable Menu Name.",
             "required": false,
-            "value": "👑━☽【🔮 𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲 🔮】☾━👑"
+            "value": "🎼━ ♥️𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲 ♥️ ━🎼"
         },
          "SONGDOWN_MSG": {
             "description": "Music Download Text.",
@@ -171,6 +171,16 @@
             "description": "Video Upload Text.",
             "required": false,
             "value": "𝐔𝐩𝐥𝐨𝐚𝐝𝐢𝐧𝐠... 📲"
+        },
+        "CMD_EMOJI": {
+            "description": "This Is Menu Cmd Emoji You Can Change It Here.",
+            "required": false,
+            "value": "🛸"
+        },
+        "DESC_EMOJI": {
+            "description": "This Is Menu Desc Emoji You Can Change It Here.",
+            "required": false,
+            "value": "✨️"
         },
         "ALIVE_MESSAGE": {
             "description": "Customizable Alive Message! Use => default, to Change back.",
