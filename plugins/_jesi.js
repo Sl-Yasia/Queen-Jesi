@@ -9,6 +9,7 @@ Queen-Jesi - Sl-Yasia
 const Jesi = require('../events');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
+const logo = fs.readFileSync('./media/menu.png')
 
 const Language = require('../language');
 const Lang = Language.getString('_jesi');
@@ -36,35 +37,16 @@ if (Config.WORKTYPE == 'private') {
                     } else {
                         HANDLER = '.';
                     }
-                    if (command.desc == '' && !command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
-                    }
-                    if (!command.desc == '' && command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n\n';
-                    }
-                    if (command.desc == '' && command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                    }
-                    if (!command.desc == '' && !command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
-                    }
-                    if (!command.desc == '' && command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                    }
-                    if (command.desc == '' && !command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                    }
-                    if  (command.desc == '' && command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n\n'
-                    }
-                    if  (!command.desc == '' && !command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                    }
+                    CMD_HELP +='' + Config.CMD_EMOJI+ ' *Cmd :* ' + (match.length >= 3 ? (HANDLER + match[2]) : command.pattern) + (command.desc === '' ? '\n' : '\n');
+                    if (command.desc !== '') CMD_HELP += Config.DESC_EMOJI+ ' *Desc :* ' + command.desc + (command.warn === '' ? '\n\n' : '\n');
+                    if (command.usage !== '') CMD_HELP += '*🀄️ ' + Lang.EXAMPLE + ':* ' + command.usage + '\n\n';
+                    if (command.warn !== '') CMD_HELP += '*⚠️ ' + Lang.WARN + ':* ' + command.warn + '\n\n';
                 }
             );
-            await message.client.sendMessage(
-                message.jid,'●▬▬▬ *'+Config.MENUMSG+'* ▬▬▬●\n\n' + CMD_HELP, MessageType.text
-            );    
+
+            var MENUNW = '+Config.MENUMSG+'\n\n'+ CMD_HELP
+            await message.client.sendMessage(message.jid,logo, MessageType.image, {mimetype: logo.png, caption: MENUNW} );
+
         } else {
             var CMD_HELP = '';
             Jesi.commands.map(
@@ -87,37 +69,17 @@ if (Config.WORKTYPE == 'private') {
                         } else {
                             HANDLER = '.';
                         }
-                        if (command.desc == '' && !command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
-                        }
-                        if (!command.desc == '' && command.usage == '' && command.warn == '') {
-                            CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n\n';
-                        }
-                        if (command.desc == '' && command.usage == '' && !command.warn == '') {
-                            CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                        }
-                        if (!command.desc == '' && !command.usage == '' && command.warn == '') {
-                            CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
-                        }
-                        if (!command.desc == '' && command.usage == '' && !command.warn == '') {
-                            CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                        }
-                        if (command.desc == '' && !command.usage == '' && !command.warn == '') {
-                            CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                        }
-                        if  (command.desc == '' && command.usage == '' && command.warn == '') {
-                            CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n\n'
-                        }
-                        if  (!command.desc == '' && !command.usage == '' && !command.warn == '') {
-                            CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                        }
+                        CMD_HELP +='' + Config.CMD_EMOJI+ ' *Cmd :* ' + (match.length >= 3 ? (HANDLER + match[2]) : command.pattern) + (command.desc === '' ? '\n' : '\n');
+                        if (command.desc !== '') CMD_HELP += Config.DESC_EMOJI+ ' *Desc :* ' + command.desc + (command.warn === '' ? '\n\n' : '\n');
+                        if (command.usage !== '') CMD_HELP += '*🀄️ ' + Lang.EXAMPLE + ':* ' + command.usage + '\n\n';
+                        if (command.warn !== '') CMD_HELP += '*⚠️ ' + Lang.WARN + ':* ' + command.warn + '\n\n';
                     }
                 }
             );
             if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
-            await message.client.sendMessage(
-                message.jid,'●▬▬▬ *'+Config.MENUMSG+'* ▬▬▬●\n\n' + CMD_HELP, MessageType.text
-            );
+            var MENUNW = '+Config.MENUMSG+'\n\n'+ CMD_HELP
+            await message.client.sendMessage(message.jid,logo, MessageType.image, {mimetype: logo.png, caption: MENUNW} );
+
         }
     }));
 }
@@ -144,35 +106,14 @@ else if (Config.WORKTYPE == 'public') {
                     } else {
                         HANDLER = '.';
                     }
-                    if (command.desc == '' && !command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
-                    }
-                    if (!command.desc == '' && command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n\n';
-                    }
-                    if (command.desc == '' && command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                    }
-                    if (!command.desc == '' && !command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
-                    }
-                    if (!command.desc == '' && command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                    }
-                    if (command.desc == '' && !command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                    }
-                    if  (command.desc == '' && command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n\n'
-                    }
-                    if  (!command.desc == '' && !command.usage == '' && !command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + mmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                    }
+                    CMD_HELP +='' + Config.CMD_EMOJI+ ' *Cmd :* ' + (match.length >= 3 ? (HANDLER + match[2]) : command.pattern) + (command.desc === '' ? '\n' : '\n');
+                    if (command.desc !== '') CMD_HELP += Config.DESC_EMOJI+ ' *Desc :* ' + command.desc + (command.warn === '' ? '\n\n' : '\n');
+                    if (command.usage !== '') CMD_HELP += '*🀄️ ' + Lang.EXAMPLE + ':* ' + command.usage + '\n\n';
+                    if (command.warn !== '') CMD_HELP += '*⚠️ ' + Lang.WARN + ':* ' + command.warn + '\n\n';
                 }
             );
-            await message.client.sendMessage(
-                message.jid,'●▬▬▬ *'+Config.MENUMSG+'* ▬▬▬●\n\n' + CMD_HELP, MessageType.text
-            );    
+            var MENUNW = '+Config.MENUMSG+'\n\n'+ CMD_HELP
+            await message.client.sendMessage(message.jid,logo, MessageType.image, {mimetype: logo.png, caption: MENUNW} );
         } else {
             var CMD_HELP = '';
             Jesi.commands.map(
@@ -195,37 +136,16 @@ else if (Config.WORKTYPE == 'public') {
                         } else {
                             HANDLER = '.';
                         }
-                        if (command.desc == '' && !command.usage == '' && command.warn == '') {
-                        CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
-                        }
-                        if (!command.desc == '' && command.usage == '' && command.warn == '') {
-                            CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n\n';
-                        }
-                        if (command.desc == '' && command.usage == '' && !command.warn == '') {
-                            CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                        }
-                        if (!command.desc == '' && !command.usage == '' && command.warn == '') {
-                            CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
-                        }
-                        if (!command.desc == '' && command.usage == '' && !command.warn == '') {
-                            CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                        }
-                        if (command.desc == '' && !command.usage == '' && !command.warn == '') {
-                            CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                        }
-                        if  (command.desc == '' && command.usage == '' && command.warn == '') {
-                            CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n\n'
-                        }
-                        if  (!command.desc == '' && !command.usage == '' && !command.warn == '') {
-                            CMD_HELP += '*🔮 ' + Lang.COMMAND + ':* ```' + (cmatch.length >= 3 ? (HANDLER + cmmatch) : command.pattern) + '```\n' + '*♥️ ' + Lang.DESC + ':* ```' + command.desc + '``` \n' + '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n' + '*⚠️ ' + Lang.WARN + ':* ```' + command.warn + '```\n\n'
-                        }
+                        CMD_HELP +='' + Config.CMD_EMOJI+ ' *Cmd :* ' + (match.length >= 3 ? (HANDLER + match[2]) : command.pattern) + (command.desc === '' ? '\n' : '\n');
+                        if (command.desc !== '') CMD_HELP += Config.DESC_EMOJI+ ' *Desc :* ' + command.desc + (command.warn === '' ? '\n\n' : '\n');
+                        if (command.usage !== '') CMD_HELP += '*🀄️ ' + Lang.EXAMPLE + ':* ' + command.usage + '\n\n';
+                        if (command.warn !== '') CMD_HELP += '*⚠️ ' + Lang.WARN + ':* ' + command.warn + '\n\n';
                     }
                 }
             );
             if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
-            await message.client.sendMessage(
-                message.jid,'●▬▬▬ *'+Config.MENUMSG+'* ▬▬▬●\n\n' + CMD_HELP, MessageType.text
-            );
+            var MENUNW = '+Config.MENUMSG+'\n\n'+ CMD_HELP
+            await message.client.sendMessage(message.jid,logo, MessageType.image, {mimetype: logo.png, caption: MENUNW} );
         }
     }));
 }
