@@ -42,6 +42,8 @@ module.exports = {
     VIRUSKICK: process.env.SPAM_KICK === undefined ? 'false' :process.env.SPAM_KICK,
     BADKICK: process.env.BAD_KICK === undefined ? 'false' :process.env.BAD_KICK,
     LINKBAN: process.env.LINK_BAN === undefined ? 'false' :process.env.LINK_BAN,
+    CMD_EMOJI: process.env.CMD_EMOJI === undefined ? '♥️' :process.env.CMD_EMOJI,
+    DESC_EMOJI: process.env.DESC_EMOJI === undefined ? '🔮' :process.env.DESC_EMOJI,
     KICKMEMSG: process.env.KICKME_MESSAGE === undefined ? 'default' : process.env.KICKME_MESSAGE,
     BLOCKCHAT: process.env.BLOCK_CHAT === undefined ? false : process.env.BLOCK_CHAT,
     ADDMSG: process.env.ADD_MESSAGE === undefined ? 'default' : process.env.ADD_MESSAGE,
