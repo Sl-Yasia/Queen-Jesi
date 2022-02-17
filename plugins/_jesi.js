@@ -44,7 +44,7 @@ if (Config.WORKTYPE == 'private') {
                 }
             );
 
-            var MENUNW = '+Config.MENUMSG+'\n\n'+ CMD_HELP
+            var MENUNW = '\n*'+Config.MENUMSG+'*\n\n'+ CMD_HELP
             await message.client.sendMessage(message.jid,logo, MessageType.image, {mimetype: logo.png, caption: MENUNW} );
 
         } else {
@@ -77,7 +77,7 @@ if (Config.WORKTYPE == 'private') {
                 }
             );
             if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
-            var MENUNW = '+Config.MENUMSG+'\n\n'+ CMD_HELP
+            var MENUNW = '\n*'+Config.MENUMSG+'*\n\n'+ CMD_HELP
             await message.client.sendMessage(message.jid,logo, MessageType.image, {mimetype: logo.png, caption: MENUNW} );
 
         }
@@ -112,7 +112,7 @@ else if (Config.WORKTYPE == 'public') {
                     if (command.warn !== '') CMD_HELP += '*⚠️ ' + Lang.WARN + ':* ' + command.warn + '\n\n';
                 }
             );
-            var MENUNW = '+Config.MENUMSG+'\n\n'+ CMD_HELP
+            var MENUNW = '\n*'+Config.MENUMSG+'*\n\n'+ CMD_HELP
             await message.client.sendMessage(message.jid,logo, MessageType.image, {mimetype: logo.png, caption: MENUNW} );
         } else {
             var CMD_HELP = '';
@@ -144,7 +144,7 @@ else if (Config.WORKTYPE == 'public') {
                 }
             );
             if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
-            var MENUNW = '+Config.MENUMSG+'\n\n'+ CMD_HELP
+            var MENUNW = '\n*'+Config.MENUMSG+'*\n\n'+ CMD_HELP
             await message.client.sendMessage(message.jid,logo, MessageType.image, {mimetype: logo.png, caption: MENUNW} );
         }
     }));
