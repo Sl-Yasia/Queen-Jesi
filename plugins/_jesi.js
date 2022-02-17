@@ -9,10 +9,10 @@ Queen-Jesi - Sl-Yasia
 const Jesi = require('../events');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
-const logo = fs.readFileSync('./media/menu.png')
-
+const fs = require('fs');
 const Language = require('../language');
 const Lang = Language.getString('_jesi');
+const logo = fs.readFileSync('./media/menu.png')
 
 if (Config.WORKTYPE == 'private') {
 
