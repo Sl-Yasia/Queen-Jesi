@@ -2,7 +2,7 @@
 
 
 <div align="center">
-  <img border-radius: 15px src="https://i.imgur.com/edP1BcX.jpg" width="200" height="200"/>
+  <img border-radius: 15px src="https://i.imgur.com/Zh5BX2B.jpg" width="200" height="200"/>
   <p align="center">
 <a href="#"><img title="QueenJesi" src="https://img.shields.io/badge/Queen-Jesi-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
@@ -21,7 +21,7 @@ Project created by <a href="https://github.com/Sl-Yasia">Sl-Yasia</a> to make it
 ----
 
 <div align="center">
-  <h1>🔮Queen Jesi🔮</h1>
+  <h1>♥️Queen Jesi♥️</h1>
 </div>
 <p align="center">
     Queen-Jesi project - Makes it easy and fun to use userbot for Whatsapp.
