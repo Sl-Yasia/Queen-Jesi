@@ -280,7 +280,7 @@ ${chalk.blue.italic('🔮 Connecting to QueenJesi... Please Wait.')}`);
         let afjesi = config.WORKTYPE == 'public' ? ' Public' : ' Private'
         console.log(chalk.bgGreen('♥️ QueenJesi' + afjesi));
         await new Promise(r => setTimeout(r, 500));
-        let EVA_ACTİON = config.LANG == 'EN' || config.LANG == 'AZ' ? '*QueenJesi Working as a Chatbot! ♥️*\n\n_The purpose of this mod is to turn the bot into a fully functional AI chatbot._\n_You can use the_ *.fulleva off* _command to return to normal mode._\n\n*Thanks For Using QueenJesi 💌*\n    *- Eva*' : '*QueenJesi Working as a Chatbot! ♥️*\n\n_The purpose of this mod is to turn the bot into a fully functional AI chatbot._\n_You can use the_ *.fulleva off* _command to return to normal mode._\n\n*Thanks For Using QueenJesi 💌*\n    *- Eva*'
+        let AI_JESI = config.LANG == 'EN' || config.LANG == 'AZ' ? '*QueenJesi Working as a Chatbot! ♥️*\n\n_The purpose of this mod is to turn the bot into a fully functional AI chatbot._\n_You can use the_ *.aijesi off* _command to return to normal mode._\n\n*Thanks For Using QueenJesi 💌*\n    *- JESI*' : '*QueenJesi Working as a Chatbot! ♥️*\n\n_The purpose of this mod is to turn the bot into a fully functional AI chatbot._\n_You can use the_ *.aijesi off* _command to return to normal mode._\n\n*Thanks For Using QueenJesi 💌*\n    *- JESI*'
         if (QueenJesiCN.user.jid == one || QueenJesiCN.user.jid == two || QueenJesiCN.user.jid == three || QueenJesiCN.user.jid == four || QueenJesiCN.user.jid == five || QueenJesiCN.user.jid == six || QueenJesiCN.user.jid == seven || QueenJesiCN.user.jid == eight) {
             await QueenJesiCN.sendMessage(QueenJesiCN.user.jid,nw, MessageType.text), console.log(nw), await new Promise(r => setTimeout(r, 1000))
             await heroku.get(baseURI + '/formation').then(async (formation) => { 
@@ -292,9 +292,9 @@ ${chalk.blue.italic('🔮 Connecting to QueenJesi... Please Wait.')}`);
                 });
             })
         }
-        if (config.FULLEVA == 'true') {
-            var eva_msg = await QueenJesiStack.eva_if(config.LANG)
-            await QueenJesiCN.sendMessage(QueenJesiCN.user.jid, eva_msg, MessageType.text)
+        if (config.AIJESI == 'true') {
+            var jesi_msg = await QueenJesiStack.jesi_if(config.LANG)
+            await QueenJesiCN.sendMessage(QueenJesiCN.user.jid, jesi_msg, MessageType.text)
         }
         else {
             var af_start = await QueenJesiStack.work_type(config.WORKTYPE, config.LANG)
