@@ -41,7 +41,7 @@
             "required": true,
             "value": "^[.!;]"
         },
-        "FULL_EVA": {
+        "AI_JESI": {
             "description": "Turn your account into a chatbot!",
             "required": true,
             "value": "false"
@@ -150,7 +150,7 @@
         "MENU_NAME": {
             "description": "Customizable Menu Name.",
             "required": false,
-            "value": "🎼━ ♥️𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲 ♥️ ━🎼"
+            "value": "🎼━ ♥️ 𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲 ♥️ ━🎼"
         },
          "SONGDOWN_MSG": {
             "description": "Music Download Text.",
