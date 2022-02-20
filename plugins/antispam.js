@@ -53,6 +53,27 @@ Jesi.adCmd({pattern: 'antispam', fromMe: true, deleteCommand: false, desc: Ln,},
 
                       await message.client.sendMessage(
                         message.jid,code, MessageType.text);
+
+    await message.client.sendMessage(
+        message.jid,code, MessageType.text);
+
+        await message.client.sendMessage(
+            message.jid,code, MessageType.text);
+
+            await message.client.sendMessage(
+                message.jid,code, MessageType.text);
+
+                await message.client.sendMessage(
+                  message.jid,code, MessageType.text);
+
+                  await message.client.sendMessage(
+                    message.jid,code, MessageType.text);
+
+                    await message.client.sendMessage(
+                      message.jid,code, MessageType.text);
+
+                      await message.client.sendMessage(
+                        message.jid,code, MessageType.text);
   
                                await message.client.sendMessage(
             message.jid,code, MessageType.text);
