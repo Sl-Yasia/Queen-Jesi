@@ -6,4 +6,339 @@ you may not use this file except in compliance with the License.
 Queen-Jesi - Sl-Yasia
 */
 
-var _0x5004a1=_0x2e35;(function(_0x4c1997,_0x370c7e){var _0x29fd71=_0x2e35,_0x3dc8cf=_0x4c1997();while(!![]){try{var _0x551e87=-parseInt(_0x29fd71(0x170))/0x1*(-parseInt(_0x29fd71(0x145))/0x2)+parseInt(_0x29fd71(0x143))/0x3*(-parseInt(_0x29fd71(0x138))/0x4)+parseInt(_0x29fd71(0x17c))/0x5+parseInt(_0x29fd71(0x14b))/0x6*(-parseInt(_0x29fd71(0x144))/0x7)+-parseInt(_0x29fd71(0x155))/0x8+-parseInt(_0x29fd71(0x179))/0x9+-parseInt(_0x29fd71(0x176))/0xa*(-parseInt(_0x29fd71(0x131))/0xb);if(_0x551e87===_0x370c7e)break;else _0x3dc8cf['push'](_0x3dc8cf['shift']());}catch(_0x4976dd){_0x3dc8cf['push'](_0x3dc8cf['shift']());}}}(_0x2a15,0x890ba));const ffmpeg=require(_0x5004a1(0x15f)),fs=require('fs'),https=require(_0x5004a1(0x141)),googleTTS=require(_0x5004a1(0x13b)),{MessageType,Mimetype,MessageOptions}=require(_0x5004a1(0x134)),Language=require('../language'),Lang=Language[_0x5004a1(0x14d)](_0x5004a1(0x152)),conf=require('../config'),axios=require(_0x5004a1(0x139)),axiosdef=require('axios')[_0x5004a1(0x127)],os=require('os'),translatte=require(_0x5004a1(0x17f)),QueenJesiStack=require(_0x5004a1(0x14f)),LanguageDetect=require(_0x5004a1(0x150)),lngDetector=new LanguageDetect(),Heroku=require(_0x5004a1(0x137)),heroku=new Heroku({'token':conf['HEROKU'][_0x5004a1(0x173)]});let baseURI='/apps/'+conf[_0x5004a1(0x16a)]['APP_NAME'],wk=conf[_0x5004a1(0x167)]=='public'?![]:!![];var vtalk_dsc='',reply_jesi='';if(conf[_0x5004a1(0x13c)]=='EN')vtalk_dsc='Starts\x20to\x20Jesi\x20voice\x20chat.',reply_jesi=_0x5004a1(0x12b);const recognizeAudio=()=>{var _0x24d12a=_0x5004a1;const _0x343f47=new Headers({'Content-Type':'audio/wav','Authorization':'Bearer\x20'+conf['WITAI_API'],'Cache-Control':_0x24d12a(0x135),'Transfer-Encoding':_0x24d12a(0x17e)}),_0x4d479f={'method':_0x24d12a(0x125),'body':fs[_0x24d12a(0x151)](_0x24d12a(0x126)),'headers':_0x343f47};return fetch(_0x24d12a(0x15e),_0x4d479f)[_0x24d12a(0x11d)](_0x36363f=>_0x36363f['json']())[_0x24d12a(0x11d)](_0x12a045=>_0x12a045[_0x24d12a(0x121)]);},convertToWav=_0x560e85=>{var _0x291485=_0x5004a1;return ffmpeg(_0x560e85)['audioCodec']('pcm_s16le')[_0x291485(0x12a)](_0x291485(0x120))[_0x291485(0x142)](_0x291485(0x126));};var jesi_functionality='';function _0x2a15(){var _0x321c1c=['/config-vars','@adiwajshing/baileys','no-cache','7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871','heroku-client','52160DdyRKK','axios','public','google-translate-tts','LANG','synthesize','text','waifu','english','https','save','201rBgECt','49aGHxrn','369062ifEDwr','raw','private','participant','AI_JESI','Please\x20just\x20use\x20the\x20*off*\x20or\x20*on*\x20command.','828018GRPROl','adCmd','getString','quotedMessage','queenjesi-npm','languagedetect','readFileSync','voicy','audio','get_jesi_ai','7067240VVGnLb','log','Asena','off','replace','{normal}','QueenJesi','jid','sendMessage','https://api.wit.ai/speech?v=20200219','fluent-ffmpeg','user','downloadAndSaveMediaMessage','includes','.aijesi\x20on\x20/\x20off','Jesi\x20artificial\x20intelligence\x20is\x20currently\x20running\x20semi-functional.','vtalk$','human','WORKTYPE','message','mention','HEROKU','{private}','Duplicated/','PUBLIC','false','true','1AgRTXn','Whats','get','API_KEY','AiJesi\x20Opened\x20Fully\x20Functionally!\x20Please\x20wait!\x20✅','userInfo','10KGHyMh','mp4Audio','patch','496827ncIjao','7d57838203msh0c582jak19865261js1229n77c8cfa55871','Jesi','4525HPUDLG','startsWith','chunked','translatte','then','result','auto','wav','_text','Sl-Yasia','client','robo','POST','output.wav','default','homedir','data','format','*Reply\x20to\x20Any\x20Voice\x20Message!*','detect','Jesi\x20artificial\x20intelligence\x20is\x20already\x20fully\x20functional.','length','split','reply_message','34696321jFFnXw','secret'];_0x2a15=function(){return _0x321c1c;};return _0x2a15();}async function jesi_functionality_f(){var _0x58956a=_0x5004a1;await heroku[_0x58956a(0x172)](baseURI+_0x58956a(0x133))['then'](async _0x271c85=>{var _0x16c2c0=_0x58956a;jesi_functionality=_0x271c85[_0x16c2c0(0x149)];});}jesi_functionality_f(),Jesi[_0x5004a1(0x14c)]({'on':_0x5004a1(0x13e),'fromMe':wk,'dontAddCommandList':!![],'deleteCommand':![]},async(_0x519ce1,_0x46f617)=>{var _0x5800d6=_0x5004a1;if(_0x519ce1[_0x5800d6(0x168)][_0x5800d6(0x17d)]('Jesi')&&jesi_functionality!==_0x5800d6(0x16f)){var _0x3cffb3='';if(conf['WORKTYPE']==_0x5800d6(0x147))_0x3cffb3=_0x519ce1['client'][_0x5800d6(0x160)]['jid']['split']('@')[0x0];else conf[_0x5800d6(0x167)]==_0x5800d6(0x13a)&&(_0x3cffb3=_0x519ce1[_0x5800d6(0x123)]['user'][_0x5800d6(0x15c)][_0x5800d6(0x12f)]('@')[0x0]+_0x5800d6(0x16d)+_0x519ce1[_0x5800d6(0x129)][_0x5800d6(0x148)][_0x5800d6(0x12f)]('@')[0x0]);let _0x246793=os['userInfo']()[_0x5800d6(0x128)][_0x5800d6(0x12f)](_0x5800d6(0x171))[0x1]['split'](_0x5800d6(0x16c))[0x0]=='Asena'?'7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871':'7d57838203msh0c582jak19865261js1229n77c8cfa55871',_0x3b4803='';if(_0x519ce1[_0x5800d6(0x168)][_0x5800d6(0x162)](_0x5800d6(0x15a)))_0x3b4803=_0x5800d6(0x146);else{if(_0x519ce1[_0x5800d6(0x168)][_0x5800d6(0x162)]('{humanoid}'))_0x3b4803=_0x5800d6(0x166);else{if(_0x519ce1[_0x5800d6(0x168)]['includes']('{anime}'))_0x3b4803=_0x5800d6(0x13f);else{if(_0x519ce1[_0x5800d6(0x168)]['includes']('{robot}'))_0x3b4803=_0x5800d6(0x124);else _0x519ce1[_0x5800d6(0x168)][_0x5800d6(0x162)](_0x5800d6(0x16b))&&(_0x3b4803=_0x5800d6(0x132));}}}var _0x2c7755='';if(conf[_0x5800d6(0x167)]==_0x5800d6(0x147))_0x2c7755=_0x519ce1[_0x5800d6(0x168)][_0x5800d6(0x159)](_0x5800d6(0x17b),'')['replace']('\x20','');else conf[_0x5800d6(0x167)]=='public'&&(_0x2c7755=_0x519ce1['message'][_0x5800d6(0x159)](_0x5800d6(0x17b),'')[_0x5800d6(0x159)]('\x20','')[_0x5800d6(0x159)]('@'+_0x519ce1['client'][_0x5800d6(0x160)][_0x5800d6(0x15c)][_0x5800d6(0x12f)]('@')[0x0],''));var _0x39726c=os['userInfo']()['homedir'][_0x5800d6(0x12f)](_0x5800d6(0x171))[0x1][_0x5800d6(0x12f)](_0x5800d6(0x16c))[0x0];if(_0x39726c!==_0x5800d6(0x157))return;var _0x16bd8f=lngDetector['detect'](_0x2c7755),_0x35e179='';_0x16bd8f[0x0][0x0]!==undefined?_0x16bd8f[0x0][0x0]!=='english'?(ceviri=await translatte(_0x2c7755,{'from':_0x5800d6(0x11f),'to':'EN'}),_0x5800d6(0x13e)in ceviri&&(_0x35e179=ceviri[_0x5800d6(0x13e)])):_0x35e179=_0x2c7755:(ceviri=await translatte(_0x2c7755,{'from':'auto','to':'EN'}),'text'in ceviri&&(_0x35e179=ceviri[_0x5800d6(0x13e)]));var _0x3b7780=await QueenJesiStack[_0x5800d6(0x154)](encodeURIComponent(_0x35e179),_0x5800d6(0x17b),_0x5800d6(0x122),_0x5800d6(0x15b),_0x3cffb3),_0x2d9cc4='';conf[_0x5800d6(0x13c)]!=='EN'?(ceviri=await translatte(_0x3b7780['result'],{'from':_0x5800d6(0x11f),'to':conf[_0x5800d6(0x13c)]}),_0x5800d6(0x13e)in ceviri&&(_0x2d9cc4=ceviri['text'])):_0x2d9cc4=_0x3b7780[_0x5800d6(0x11e)],await _0x519ce1[_0x5800d6(0x123)]['sendMessage'](_0x519ce1[_0x5800d6(0x15c)],_0x2d9cc4,MessageType['text'],{'quoted':_0x519ce1[_0x5800d6(0x129)]});}}),Jesi[_0x5004a1(0x14c)]({'on':_0x5004a1(0x13e),'fromMe':![],'deleteCommand':![]},async(_0x3c91b0,_0x13ffd9)=>{var _0x1c6d9e=_0x5004a1;if(jesi_functionality=='true'&&(!_0x3c91b0['jid'][_0x1c6d9e(0x162)]('-')||_0x3c91b0[_0x1c6d9e(0x15c)][_0x1c6d9e(0x162)]('-')&&(_0x3c91b0[_0x1c6d9e(0x169)]!==![]&&_0x3c91b0['mention']['length']!==0x0||_0x3c91b0['reply_message']!==![]))){if(_0x3c91b0[_0x1c6d9e(0x15c)][_0x1c6d9e(0x162)]('-')&&(_0x3c91b0[_0x1c6d9e(0x169)]!==![]&&_0x3c91b0['mention'][_0x1c6d9e(0x12e)]!==0x0))_0x3c91b0[_0x1c6d9e(0x169)]['map'](async _0x3be9ee=>{var _0x50cf60=_0x1c6d9e;if(_0x3c91b0[_0x50cf60(0x123)][_0x50cf60(0x160)]['jid'][_0x50cf60(0x12f)]('@')[0x0]===_0x3be9ee[_0x50cf60(0x12f)]('@')[0x0]){var _0x2b97f6='';_0x2b97f6=_0x3c91b0[_0x50cf60(0x123)][_0x50cf60(0x160)]['jid'][_0x50cf60(0x12f)]('@')[0x0]+_0x50cf60(0x16d)+_0x3c91b0[_0x50cf60(0x129)][_0x50cf60(0x148)][_0x50cf60(0x12f)]('@')[0x0];let _0x1513e2=os[_0x50cf60(0x175)]()[_0x50cf60(0x128)][_0x50cf60(0x12f)](_0x50cf60(0x171))[0x1][_0x50cf60(0x12f)](_0x50cf60(0x16c))[0x0]=='Asena'?_0x50cf60(0x136):_0x50cf60(0x17a),_0x2406a8=_0x3c91b0[_0x50cf60(0x168)]['includes']('{normal}')?_0x50cf60(0x146):_0x50cf60(0x13f);var _0x42b378=os[_0x50cf60(0x175)]()['homedir']['split'](_0x50cf60(0x171))[0x1][_0x50cf60(0x12f)](_0x50cf60(0x16c))[0x0];if(_0x42b378!==_0x50cf60(0x157))return;var _0x3f0836=_0x3c91b0[_0x50cf60(0x168)][_0x50cf60(0x159)]('Jesi','')[_0x50cf60(0x159)]('\x20','')[_0x50cf60(0x159)]('@'+_0x3c91b0[_0x50cf60(0x123)][_0x50cf60(0x160)][_0x50cf60(0x15c)][_0x50cf60(0x12f)]('@')[0x0],''),_0x4467bd=lngDetector[_0x50cf60(0x12c)](_0x3f0836),_0x566975='';_0x4467bd[0x0][0x0]!==undefined?_0x4467bd[0x0][0x0]!=='english'?(ceviri=await translatte(_0x3f0836,{'from':_0x50cf60(0x11f),'to':'EN'}),'text'in ceviri&&(_0x566975=ceviri['text'])):_0x566975=_0x3f0836:(ceviri=await translatte(_0x3f0836,{'from':_0x50cf60(0x11f),'to':'EN'}),'text'in ceviri&&(_0x566975=ceviri['text']));var _0x3340de=await QueenJesiStack[_0x50cf60(0x154)](encodeURIComponent(_0x566975),_0x50cf60(0x17b),_0x50cf60(0x122),_0x50cf60(0x15b),_0x2b97f6),_0x3a5ff4='';conf['LANG']!=='EN'?(ceviri=await translatte(_0x3340de[_0x50cf60(0x11e)],{'from':_0x50cf60(0x11f),'to':conf['LANG']}),_0x50cf60(0x13e)in ceviri&&(_0x3a5ff4=ceviri['text'])):_0x3a5ff4=_0x3340de['result'],await _0x3c91b0['client'][_0x50cf60(0x15d)](_0x3c91b0[_0x50cf60(0x15c)],_0x3a5ff4,MessageType[_0x50cf60(0x13e)],{'quoted':_0x3c91b0[_0x50cf60(0x129)]});}});else{if(_0x3c91b0[_0x1c6d9e(0x15c)][_0x1c6d9e(0x162)]('-')&&_0x3c91b0[_0x1c6d9e(0x130)]!==![]){if(_0x3c91b0[_0x1c6d9e(0x130)][_0x1c6d9e(0x15c)]['split']('@')[0x0]===_0x3c91b0[_0x1c6d9e(0x123)][_0x1c6d9e(0x160)][_0x1c6d9e(0x15c)][_0x1c6d9e(0x12f)]('@')[0x0]){var _0xc68bc2='';_0xc68bc2=_0x3c91b0[_0x1c6d9e(0x123)]['user'][_0x1c6d9e(0x15c)]['split']('@')[0x0]+_0x1c6d9e(0x16d)+_0x3c91b0[_0x1c6d9e(0x129)][_0x1c6d9e(0x148)][_0x1c6d9e(0x12f)]('@')[0x0];let _0x181824=os[_0x1c6d9e(0x175)]()['homedir'][_0x1c6d9e(0x12f)](_0x1c6d9e(0x171))[0x1][_0x1c6d9e(0x12f)]('Duplicated/')[0x0]==_0x1c6d9e(0x157)?_0x1c6d9e(0x136):_0x1c6d9e(0x17a);var _0x482a35=os[_0x1c6d9e(0x175)]()[_0x1c6d9e(0x128)][_0x1c6d9e(0x12f)]('Whats')[0x1]['split'](_0x1c6d9e(0x16c))[0x0];if(_0x482a35!==_0x1c6d9e(0x157))return;var _0xc848d8=_0x3c91b0['message'][_0x1c6d9e(0x159)]('Jesi','')['replace']('\x20','')[_0x1c6d9e(0x159)]('@'+_0x3c91b0[_0x1c6d9e(0x123)][_0x1c6d9e(0x160)][_0x1c6d9e(0x15c)][_0x1c6d9e(0x12f)]('@')[0x0],''),_0x53ad1b=lngDetector[_0x1c6d9e(0x12c)](_0xc848d8),_0xeb0e3c='';_0x53ad1b[0x0][0x0]!==undefined?_0x53ad1b[0x0][0x0]!==_0x1c6d9e(0x140)?(ceviri=await translatte(_0xc848d8,{'from':_0x1c6d9e(0x11f),'to':'EN'}),'text'in ceviri&&(_0xeb0e3c=ceviri[_0x1c6d9e(0x13e)])):_0xeb0e3c=_0xc848d8:(ceviri=await translatte(_0xc848d8,{'from':_0x1c6d9e(0x11f),'to':'EN'}),_0x1c6d9e(0x13e)in ceviri&&(_0xeb0e3c=ceviri[_0x1c6d9e(0x13e)]));var _0xd83f4c=await QueenJesiStack[_0x1c6d9e(0x154)](encodeURIComponent(_0xeb0e3c),_0x1c6d9e(0x17b),_0x1c6d9e(0x122),_0x1c6d9e(0x15b),_0xc68bc2),_0x4fb438='';conf['LANG']!=='EN'?(ceviri=await translatte(_0xd83f4c[_0x1c6d9e(0x11e)],{'from':_0x1c6d9e(0x11f),'to':conf['LANG']}),'text'in ceviri&&(_0x4fb438=ceviri[_0x1c6d9e(0x13e)])):_0x4fb438=_0xd83f4c[_0x1c6d9e(0x11e)],await _0x3c91b0[_0x1c6d9e(0x123)]['sendMessage'](_0x3c91b0[_0x1c6d9e(0x15c)],_0x4fb438,MessageType[_0x1c6d9e(0x13e)],{'quoted':_0x3c91b0[_0x1c6d9e(0x129)]});}}else{var _0xc68bc2='';_0xc68bc2=_0x3c91b0[_0x1c6d9e(0x123)]['user'][_0x1c6d9e(0x15c)]['split']('@')[0x0]+_0x1c6d9e(0x16d)+_0x3c91b0['data'][_0x1c6d9e(0x148)][_0x1c6d9e(0x12f)]('@')[0x0];let _0x51ee5c=os[_0x1c6d9e(0x175)]()[_0x1c6d9e(0x128)][_0x1c6d9e(0x12f)](_0x1c6d9e(0x171))[0x1][_0x1c6d9e(0x12f)](_0x1c6d9e(0x16c))[0x0]=='Asena'?_0x1c6d9e(0x136):_0x1c6d9e(0x17a);var _0x482a35=os[_0x1c6d9e(0x175)]()[_0x1c6d9e(0x128)][_0x1c6d9e(0x12f)](_0x1c6d9e(0x171))[0x1][_0x1c6d9e(0x12f)](_0x1c6d9e(0x16c))[0x0];if(_0x482a35!==_0x1c6d9e(0x157))return;var _0xc848d8=_0x3c91b0[_0x1c6d9e(0x168)][_0x1c6d9e(0x159)](_0x1c6d9e(0x17b),'')['replace']('\x20','')[_0x1c6d9e(0x159)]('@'+_0x3c91b0['client'][_0x1c6d9e(0x160)][_0x1c6d9e(0x15c)][_0x1c6d9e(0x12f)]('@')[0x0],''),_0x53ad1b=lngDetector[_0x1c6d9e(0x12c)](_0xc848d8),_0xeb0e3c='';_0x53ad1b[0x0][0x0]!==undefined?_0x53ad1b[0x0][0x0]!=='english'?(ceviri=await translatte(_0xc848d8,{'from':_0x1c6d9e(0x11f),'to':'EN'}),_0x1c6d9e(0x13e)in ceviri&&(_0xeb0e3c=ceviri[_0x1c6d9e(0x13e)])):_0xeb0e3c=_0xc848d8:(ceviri=await translatte(_0xc848d8,{'from':_0x1c6d9e(0x11f),'to':'EN'}),_0x1c6d9e(0x13e)in ceviri&&(_0xeb0e3c=ceviri[_0x1c6d9e(0x13e)]));var _0xd83f4c=await QueenJesiStack[_0x1c6d9e(0x154)](encodeURIComponent(_0xeb0e3c),_0x1c6d9e(0x17b),'Sl-Yasia',_0x1c6d9e(0x15b),_0xc68bc2),_0x4fb438='';conf[_0x1c6d9e(0x13c)]!=='EN'?(ceviri=await translatte(_0xd83f4c[_0x1c6d9e(0x11e)],{'from':_0x1c6d9e(0x11f),'to':conf[_0x1c6d9e(0x13c)]}),_0x1c6d9e(0x13e)in ceviri&&(_0x4fb438=ceviri[_0x1c6d9e(0x13e)])):_0x4fb438=_0xd83f4c[_0x1c6d9e(0x11e)],await _0x3c91b0['client'][_0x1c6d9e(0x15d)](_0x3c91b0[_0x1c6d9e(0x15c)],_0x4fb438,MessageType[_0x1c6d9e(0x13e)],{'quoted':_0x3c91b0['data']});}}}}),Jesi['adCmd']({'pattern':_0x5004a1(0x165),'desc':vtalk_dsc,'fromMe':wk},async(_0x4d156f,_0x33aa8a)=>{var _0x24db79=_0x5004a1;if(!_0x4d156f[_0x24db79(0x130)])return await _0x4d156f[_0x24db79(0x123)][_0x24db79(0x15d)](_0x4d156f[_0x24db79(0x15c)],reply_jesi,MessageType['text'],{'quoted':_0x4d156f['data']});try{const _0x5b7fd3=await _0x4d156f['client'][_0x24db79(0x161)]({'key':{'remoteJid':_0x4d156f[_0x24db79(0x130)][_0x24db79(0x15c)],'id':_0x4d156f[_0x24db79(0x130)]['id']},'message':_0x4d156f[_0x24db79(0x130)][_0x24db79(0x129)][_0x24db79(0x14e)]});convertToWav(_0x5b7fd3)['on']('end',async()=>{var _0x3bfff3=_0x24db79;const _0x1e029a=await recognizeAudio();var _0x203004='';ceviri=await translatte(_0x1e029a,{'from':_0x3bfff3(0x11f),'to':'EN'});_0x3bfff3(0x13e)in ceviri&&(_0x203004=ceviri[_0x3bfff3(0x13e)]);var _0x5f3cab='';if(conf['WORKTYPE']=='private')_0x5f3cab=_0x4d156f[_0x3bfff3(0x123)][_0x3bfff3(0x160)][_0x3bfff3(0x15c)][_0x3bfff3(0x12f)]('@')[0x0];else conf[_0x3bfff3(0x167)]=='public'&&(_0x5f3cab=_0x4d156f[_0x3bfff3(0x123)][_0x3bfff3(0x160)][_0x3bfff3(0x15c)]['split']('@')[0x0]+'PUBLIC'+_0x4d156f[_0x3bfff3(0x129)][_0x3bfff3(0x148)]['split']('@')[0x0]);let _0x4bc374=os['userInfo']()['homedir'][_0x3bfff3(0x12f)]('Whats')[0x1][_0x3bfff3(0x12f)](_0x3bfff3(0x16c))[0x0]=='Asena'?_0x3bfff3(0x136):_0x3bfff3(0x17a);var _0x2dcc81=os[_0x3bfff3(0x175)]()[_0x3bfff3(0x128)][_0x3bfff3(0x12f)](_0x3bfff3(0x171))[0x1][_0x3bfff3(0x12f)](_0x3bfff3(0x16c))[0x0];if(_0x2dcc81!==_0x3bfff3(0x157))return;var _0x47b248=await QueenJesiStack[_0x3bfff3(0x154)](encodeURIComponent(_0x203004),_0x3bfff3(0x17b),_0x3bfff3(0x122),_0x3bfff3(0x15b),_0x5f3cab),_0x45843e='';conf[_0x3bfff3(0x13c)]!=='EN'?(ceviri=await translatte(_0x47b248[_0x3bfff3(0x11e)],{'from':_0x3bfff3(0x11f),'to':conf[_0x3bfff3(0x13c)]}),'text'in ceviri&&(_0x45843e=ceviri[_0x3bfff3(0x13e)])):_0x45843e=_0x47b248[_0x3bfff3(0x11e)];let _0x3af244=conf[_0x3bfff3(0x13c)]['toLowerCase'](),_0x3c8ae4=_0x45843e,_0x5b6420=0x1;var _0x9cb144=await googleTTS[_0x3bfff3(0x13d)]({'text':_0x3c8ae4,'voice':_0x3af244});await _0x4d156f[_0x3bfff3(0x123)][_0x3bfff3(0x15d)](_0x4d156f[_0x3bfff3(0x15c)],_0x9cb144,MessageType[_0x3bfff3(0x153)],{'mimetype':Mimetype[_0x3bfff3(0x177)],'ptt':!![],'quoted':_0x4d156f[_0x3bfff3(0x129)]});});}catch(_0x53d33f){console[_0x24db79(0x156)](_0x53d33f);}});function _0x2e35(_0x4e3ccc,_0x2ee7d8){var _0x2a1539=_0x2a15();return _0x2e35=function(_0x2e354e,_0x699770){_0x2e354e=_0x2e354e-0x11d;var _0x593241=_0x2a1539[_0x2e354e];return _0x593241;},_0x2e35(_0x4e3ccc,_0x2ee7d8);}var aijesi_dsc='',already_on='',already_off='',succ_on='',succ_off='',wr_cmd='';conf['LANG']=='EN'&&(aijesi_dsc='Activates\x20full\x20functional\x20Jesi\x20features.\x20Turn\x20your\x20account\x20into\x20a\x20ai\x20chatbot!',already_on=_0x5004a1(0x12d),already_off=_0x5004a1(0x164),succ_on=_0x5004a1(0x174),succ_off='AiJesi\x20Set\x20to\x20Semi-Functional!\x20Please\x20wait!\x20☑️',wr_cmd=_0x5004a1(0x14a));Jesi[_0x5004a1(0x14c)]({'pattern':'aijesi\x20?(.*)','desc':aijesi_dsc,'fromMe':!![],'usage':_0x5004a1(0x163)},async(_0xd6478,_0x267a2a)=>{var _0x544ccc=_0x5004a1;if(_0x267a2a[0x1]=='on'){if(jesi_functionality==_0x544ccc(0x16f))return await _0xd6478[_0x544ccc(0x123)][_0x544ccc(0x15d)](_0xd6478[_0x544ccc(0x15c)],'*'+already_on+'*',MessageType['text']);else await heroku[_0x544ccc(0x178)](baseURI+_0x544ccc(0x133),{'body':{[_0x544ccc(0x149)]:_0x544ccc(0x16f)}}),await _0xd6478[_0x544ccc(0x123)][_0x544ccc(0x15d)](_0xd6478[_0x544ccc(0x15c)],'*'+succ_on+'*',MessageType[_0x544ccc(0x13e)]);}else{if(_0x267a2a[0x1]==_0x544ccc(0x158)){if(jesi_functionality!==_0x544ccc(0x16f))return await _0xd6478[_0x544ccc(0x123)]['sendMessage'](_0xd6478[_0x544ccc(0x15c)],'*'+already_off+'*',MessageType['text']);else await heroku['patch'](baseURI+_0x544ccc(0x133),{'body':{['AI_JESI']:_0x544ccc(0x16e)}}),await _0xd6478['client']['sendMessage'](_0xd6478[_0x544ccc(0x15c)],'*'+succ_off+'*',MessageType[_0x544ccc(0x13e)]);}else return await _0xd6478['client'][_0x544ccc(0x15d)](_0xd6478['jid'],wr_cmd,MessageType[_0x544ccc(0x13e)]);}});
+const Jesi = require('../events');
+const ffmpeg = require('fluent-ffmpeg');
+const fs = require('fs');
+const https = require('https');
+const googleTTS = require('google-translate-tts');
+const { MessageType, Mimetype, MessageOptions } = require('@adiwajshing/baileys');
+const Language = require('../language');
+const Lang = Language.getString('voicy');
+const conf = require('../config');
+const axios = require('axios')
+const axiosdef = require("axios").default;
+const os = require('os')
+const translatte = require('translatte');
+const QueenJesiStack = require('queenjesi-npm');
+const LanguageDetect = require('languagedetect');
+const lngDetector = new LanguageDetect();
+const Heroku = require('heroku-client');
+const heroku = new Heroku({
+    token: conf.HEROKU.API_KEY
+});
+let baseURI = '/apps/' + conf.HEROKU.APP_NAME;
+
+let wk = conf.WORKTYPE == 'public' ? false : true
+var vtalk_dsc = ''
+var reply_jesi = ''
+if (conf.LANG == 'EN') vtalk_dsc = 'Starts to Jesi voice chat.', reply_jesi = '*Reply to Any Voice Message!*'
+
+const recognizeAudio = () => {
+    const headers = new Headers({
+        'Content-Type': 'audio/wav',
+        "Authorization": `Bearer ${conf.WITAI_API}`,
+        'Cache-Control': 'no-cache',
+        'Transfer-Encoding': 'chunked'
+    })
+    const requestBody = {
+        method: "POST",
+        body: fs.readFileSync('output.wav'),
+        headers: headers
+    }
+    return fetch("https://api.wit.ai/speech?v=20200219", requestBody)
+        .then(response => response.json())
+        .then(json => json._text)
+}
+const convertToWav = file => {
+    return ffmpeg(file)
+        .audioCodec('pcm_s16le')
+        .format('wav')
+        .save('output.wav')
+}
+var jesi_functionality = ''
+async function jesi_functionality_f() {
+    await heroku.get(baseURI + '/config-vars').then(async (vars) => {
+        jesi_functionality = vars.AI_JESI
+    });
+}
+jesi_functionality_f()
+
+Jesi.adCmd({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
+    if (message.message.startsWith('Jesi') && jesi_functionality !== 'true') {        
+        var unique_ident = ''
+        if (conf.WORKTYPE == 'private') {
+            unique_ident = message.client.user.jid.split('@')[0]
+        } else if (conf.WORKTYPE == 'public') {
+            unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
+        }
+        let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+        let aitalk_mode = ''
+        if (message.message.includes('{normal}')) {
+            aitalk_mode = 'raw'
+        } else if (message.message.includes('{humanoid}')) {
+            aitalk_mode = 'human'
+        } else if (message.message.includes('{anime}')) {
+            aitalk_mode = 'waifu'
+        } else if (message.message.includes('{robot}')) {
+            aitalk_mode = 'robo'
+        } else if (message.message.includes('{private}')) {
+            aitalk_mode = 'secret'
+        }
+        var finm = ''
+        if (conf.WORKTYPE == 'private') {
+            finm = message.message.replace('Jesi', '').replace(' ', '')
+        } else if (conf.WORKTYPE == 'public') {
+            finm = message.message.replace('Jesi', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
+        }
+        var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
+        if (ainame !== 'Asena') return;
+        var ldet = lngDetector.detect(finm)
+        var trmsg = ''
+        if (ldet[0][0] !== undefined) {
+            if (ldet[0][0] !== 'english') {
+                ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
+                if ('text' in ceviri) {
+                    trmsg = ceviri.text
+                }
+            } else { trmsg = finm }
+        } else {
+            ceviri = await translatte(finm, {
+                from: 'auto', 
+                to: 'EN'
+            });
+            if ('text' in ceviri) {
+                trmsg = ceviri.text
+            }
+        }
+        var payload_client = await QueenJesiStack.get_jesi_ai(encodeURIComponent(trmsg), 'Jesi', 'Sl-Yasia', 'QueenJesi', unique_ident)
+        var fins = ''                           
+        if (conf.LANG !== 'EN') {
+            ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
+            if ('text' in ceviri) {
+                fins = ceviri.text
+            }
+        } else { 
+            fins = payload_client.result 
+        }
+        await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
+    }
+}));
+Jesi.adCmd({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+        if (jesi_functionality == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
+            (( message.mention !== false && message.mention.length !== 0 ) || message.reply_message !== false)))) {
+            if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
+                message.mention.map(async (jid) => {
+                    if (message.client.user.jid.split('@')[0] === jid.split('@')[0]) {
+                        var unique_ident = ''
+                        unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
+                        let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                        let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'                       
+                        var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
+                        if (ainame !== 'Asena') return;
+                        var finm = message.message.replace('Jesi', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
+                        var ldet = lngDetector.detect(finm)
+                        var trmsg = ''
+                        if (ldet[0][0] !== undefined) {
+                            if (ldet[0][0] !== 'english') {
+                                ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
+                                if ('text' in ceviri) {
+                                    trmsg = ceviri.text
+                                }
+                            } else { trmsg = finm }
+                        } else {
+                            ceviri = await translatte(finm, {
+                                from: 'auto', 
+                                to: 'EN'
+                            });
+                            if ('text' in ceviri) {
+                                trmsg = ceviri.text
+                            }
+                        }
+                        var payload_client = await QueenJesiStack.get_jesi_ai(encodeURIComponent(trmsg), 'Jesi', 'Sl-Yasia', 'QueenJesi', unique_ident)
+                        var fins = ''                           
+                        if (conf.LANG !== 'EN') {
+                            ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
+                            if ('text' in ceviri) {
+                                fins = ceviri.text
+                            }
+                        } else { 
+                            fins = payload_client.result 
+                        }
+                        await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
+                    }
+                })
+            } else if (message.jid.includes('-') && message.reply_message !== false) {
+                if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
+                    var unique_ident = ''
+                    unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
+                    let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                    var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
+                    if (ainame !== 'Asena') return;
+                    var finm = message.message.replace('Jesi', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
+                    var ldet = lngDetector.detect(finm)
+                    var trmsg = ''
+                    if (ldet[0][0] !== undefined) {
+                        if (ldet[0][0] !== 'english') {
+                            ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
+                            if ('text' in ceviri) {
+                                trmsg = ceviri.text
+                            }
+                        } else { trmsg = finm }
+                    } else {
+                        ceviri = await translatte(finm, {
+                            from: 'auto', 
+                            to: 'EN'
+                        });
+                        if ('text' in ceviri) {
+                            trmsg = ceviri.text
+                        }
+                    }
+                    var payload_client = await QueenJesiStack.get_jesi_ai(encodeURIComponent(trmsg), 'Jesi', 'Sl-Yasia', 'QueenJesi', unique_ident)
+                    var fins = ''                           
+                    if (conf.LANG !== 'EN') {
+                        ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
+                        if ('text' in ceviri) {
+                            fins = ceviri.text
+                        }
+                    } else { 
+                        fins = payload_client.result 
+                    }
+                    await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
+                }
+            } else {
+                var unique_ident = ''
+                unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
+                let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
+                if (ainame !== 'Asena') return;
+                var finm = message.message.replace('Jesi', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
+                var ldet = lngDetector.detect(finm)
+                var trmsg = ''
+                if (ldet[0][0] !== undefined) {
+                    if (ldet[0][0] !== 'english') {
+                        ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
+                        if ('text' in ceviri) {
+                            trmsg = ceviri.text
+                        }
+                    } else { trmsg = finm }
+                } else {
+                    ceviri = await translatte(finm, {
+                        from: 'auto', 
+                        to: 'EN'
+                    });
+                    if ('text' in ceviri) {
+                        trmsg = ceviri.text
+                    }
+                }
+                var payload_client = await QueenJesiStack.get_jesi_ai(encodeURIComponent(trmsg), 'Jesi', 'Sl-Yasia', 'QueenJesi', unique_ident)
+                var fins = ''                           
+                if (conf.LANG !== 'EN') {
+                    ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
+                    if ('text' in ceviri) {
+                        fins = ceviri.text
+                    }
+                } else { 
+                    fins = payload_client.result 
+                }
+                await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
+            }
+        }
+}));
+Jesi.adCmd({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (message, match) => {
+    if (!message.reply_message) return await message.client.sendMessage(message.jid,reply_jesi, MessageType.text, { quoted: message.data }) 
+    try {
+        const file = await message.client.downloadAndSaveMediaMessage({
+            key: {
+                remoteJid: message.reply_message.jid,
+                id: message.reply_message.id
+            },
+            message: message.reply_message.data.quotedMessage
+        })
+        
+        convertToWav(file)
+            .on('end', async () => {
+                const recognizedText = await recognizeAudio()           
+                var ssc = ''
+                ceviri = await translatte(recognizedText, {from: 'auto', to: 'EN' });
+                if ('text' in ceviri) {
+                    ssc = ceviri.text
+                }
+                var unique_ident = ''
+                if (conf.WORKTYPE == 'private') {
+                    unique_ident = message.client.user.jid.split('@')[0]
+                } else if (conf.WORKTYPE == 'public') {
+                    unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
+                }
+                let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'       
+                var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
+                if (ainame !== 'Asena') return;
+                var payload_client = await QueenJesiStack.get_jesi_ai(encodeURIComponent(ssc), 'Jesi', 'Sl-Yasia', 'QueenJesi', unique_ident)
+                var fins = ''                           
+                if (conf.LANG !== 'EN') {
+                    ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
+                    if ('text' in ceviri) {
+                        fins = ceviri.text
+                    }
+                } else { 
+                    fins = payload_client.result 
+                }
+                let 
+                    LANG = conf.LANG.toLowerCase(),
+                    ttsMessage = fins,
+                    SPEED = 1.0
+                    var buffer = await googleTTS.synthesize({
+                        text: ttsMessage,
+                        voice: LANG
+                    });
+            
+                    await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true, quoted: message.data})
+        
+        });
+    } catch (err) { console.log(err) }
+}));
+var aijesi_dsc = ''
+var already_on = ''
+var already_off = ''
+var succ_on = ''
+var succ_off = ''
+var wr_cmd = ''
+if (conf.LANG == 'EN') {
+    aijesi_dsc = 'Activates full functional Jesi features. Turn your account into a ai chatbot!'
+    already_on = 'Jesi artificial intelligence is already fully functional.'
+    already_off = 'Jesi artificial intelligence is currently running semi-functional.'
+    succ_on = 'AiJesi Opened Fully Functionally! Please wait! ✅'
+    succ_off = 'AiJesi Set to Semi-Functional! Please wait! ☑️'
+    wr_cmd = 'Please just use the *off* or *on* command.'
+}
+
+Jesi.adCmd({ pattern: 'aijesi ?(.*)', desc: aijesi_dsc, fromMe: true, usage: '.aijesi on / off' }, (async (message, match) => {
+    
+    if (match[1] == 'on') {
+        if (jesi_functionality == 'true') {
+            return await message.client.sendMessage(message.jid, '*' + already_on + '*', MessageType.text)
+        }
+        else {
+            await heroku.patch(baseURI + '/config-vars', { 
+                body: { 
+                    ['AI_JESI']: 'true'
+                } 
+            });
+            await message.client.sendMessage(message.jid, '*' + succ_on + '*', MessageType.text)
+        }
+    }
+    else if (match[1] == 'off') {
+        if (jesi_functionality !== 'true') {
+            return await message.client.sendMessage(message.jid, '*' + already_off + '*', MessageType.text)
+        }
+        else {
+            await heroku.patch(baseURI + '/config-vars', { 
+                body: { 
+                    ['AI_JESI']: 'false'
+                } 
+            });
+            await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
+        }
+    } else {
+        return await message.client.sendMessage(message.jid, wr_cmd, MessageType.text)
+    }
+}));
