@@ -25,7 +25,7 @@ if (Config.WORKTYPE == 'private') {
             
             var image = await axios.get (Config.ALIVE_LOGO, {responseType: 'arraybuffer'})
        
-        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: "👑━━☽【♥️ 𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲 ♥️】☾━━👑\n\n\n➣ *Version:* ```2.0 Public Stable```\n\n➣ *Branch:* ```Master```\n\n➣ *Developer:* ```SL Yasiya```\n\n➣ *For Help:* ```t.me/SLYasiya```\n\n➣ *Help Group:* ```https://chat.whatsapp.com/LTasc6L1EMcDorh00S06fw```\n\n\n```╚╌•---»♦️𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲♦️«---•╌╝```"})
+        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: "🎼━ 𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲  ━🎼\n\n\n➣ *Version:* ```2.0 Public```\n\n➣ *Branch:* ```Master```\n\n➣ *Host:* ```Aws```\n\n➣ *Developer:* ```Yasiya```\n\n➣ *For Help:* ```t.me/y_a_s_i_y_a```\n\n\n```╚╌»♥️ 𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲  ♥️«╌╝```"})
 
     }
     else {
@@ -52,7 +52,7 @@ else if (Config.WORKTYPE == 'public') {
             
             var image = await axios.get (Config.ALIVE_LOGO, {responseType: 'arraybuffer'})
        
-        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: "👑━━☽【♥️ 𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲 ♥️】☾━━👑\n\n\n➣ *Version:* ```2.0 Public Stable```\n\n➣ *Branch:* ```Master```\n\n➣ *Developer:* ```SL Yasiya```\n\n➣ *For Help:* ```t.me/SLYasiya```\n\n➣ *Help Group:* ```https://chat.whatsapp.com/LTasc6L1EMcDorh00S06fw```\n\n\n```╚╌•---»♦️𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲♦️«---•╌╝```"})
+        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.png, caption: "🎼━ 𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲  ━🎼\n\n\n➣ *Version:* ```2.0 Public```\n\n➣ *Branch:* ```Master```\n\n➣ *Host:* ```Aws```\n\n➣ *Developer:* ```Yasiya```\n\n➣ *For Help:* ```t.me/y_a_s_i_y_a```\n\n\n```╚╌»♥️ 𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲  ♥️«╌╝```"})
 
     }
     else {
