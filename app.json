@@ -3,9 +3,9 @@
     "description": "QueenJesi project - Makes it easy and fun to use Whatsapp.",
     "logo": "https://i.imgur.com/Dj8Vvqr.jpg",
     "keywords": ["whatsapp", "userbot", "Jesi", "QueenJesi", "bot", "api", "ai"],
-    "repository": "https://github.com/Sl-Yasia/Queen-Jesi",
-    "website":   "https://t.me/Sl-Yasiya",
-    "success_url": "https://t.me/Sl-Yasiya",
+    "repository": "https://github.com/Sl-Yasiya/Queen-Jesi",
+    "website":   "https://t.me/ya_s_i_y_a",
+    "success_url": "https://t.me/ya_s_i_y_a",
     "stack": "container",
     "env": {
         "A_JESI_SESSION": {
