@@ -31,6 +31,7 @@ module.exports = {
     ALIVEMSG: process.env.ALIVE_MESSAGE === undefined ? 'default' : process.env.ALIVE_MESSAGE,
     ALIVE_LOGO: process.env.ALIVE_LOGO === undefined ? 'https://i.imgur.com/Z5fxCpm.jpg' : process.env.ALIVE_LOGO,
     CPK: process.env.CPK === undefined ? '✰◉𝓒𝓻𝓮𝓪𝓽𝓮𝓭 𝓑𝓽 𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲◉✰' : process.env.CPK,
+    VCPK: process.env.VCPK === undefined ? '🎼━ ♥️ 𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲 ♥️ ━🎼' : process.env.VCPK,
     MENUMSG: process.env.MENU_NAME === undefined ? '♚◉𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲◉♚' : process.env.MENU_NAME,
     WEL_GIF: process.env.WELCOME_GIF === undefined ? 'https://telegra.ph/file/8e40b48744f52b20b2264.mp4' : process.env.WELCOME_GIF,
     BYE_GIF: process.env.GOODBYE_GIF === undefined ? 'https://telegra.ph/file/3628de591df2f2b1e91ee.mp4' : process.env.GOODBYE_GIF,
