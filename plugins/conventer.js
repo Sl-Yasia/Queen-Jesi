@@ -123,7 +123,7 @@ if (Config.WORKTYPE == 'private') {
             await Axios({ method: "GET", url: rest.result, responseType: "stream"}).then(({ data }) => {
                 const saving = data.pipe(fs.createWriteStream('/root/Queen-Jesi/stweb.mp4'))
                 saving.on("finish", async () => {
-                    await message.client.sendMessage(mid, fs.readFileSync('/root/Queen-Jesi/stweb.mp4'), MessageType.video, { mimetype: Mimetype.mp4, caption: config.CPK, quoted: message.data })
+                    await message.client.sendMessage(mid, fs.readFileSync('/root/Queen-Jesi/stweb.mp4'), MessageType.video, { mimetype: Mimetype.mp4, caption: Config.CPK, quoted: message.data })
                     if (fs.existsSync(savedFilename)) fs.unlinkSync(savedFilename)
                     if (fs.existsSync('/root/Queen-Jesi/stweb.mp4')) fs.unlinkSync('/root/Queen-Jesi/stweb.mp4')
                 })
@@ -188,7 +188,7 @@ else if (Config.WORKTYPE == 'public') {
             await Axios({ method: "GET", url: rest.result, responseType: "stream"}).then(({ data }) => {
                 const saving = data.pipe(fs.createWriteStream('/root/Queen-Jesi/stweb.mp4'))
                 saving.on("finish", async () => {
-                    await message.client.sendMessage(mid, fs.readFileSync('/root/Queen-Jesi/stweb.mp4'), MessageType.video, { mimetype: Mimetype.mp4, caption: config.CPK, quoted: message.data })
+                    await message.client.sendMessage(mid, fs.readFileSync('/root/Queen-Jesi/stweb.mp4'), MessageType.video, { mimetype: Mimetype.mp4, caption: Config.CPK, quoted: message.data })
                     if (fs.existsSync(savedFilename)) fs.unlinkSync(savedFilename)
                     if (fs.existsSync('/root/Queen-Jesi/stweb.mp4')) fs.unlinkSync('/root/Queen-Jesi/stweb.mp4')
                 })
