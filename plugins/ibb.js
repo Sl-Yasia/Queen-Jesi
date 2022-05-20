@@ -6,4 +6,78 @@ you may not use this file except in compliance with the License.
 Queen-Jesi - Sl-Yasia
 */
 
-var _0xc603=["\x2E\x2E\x2F\x65\x76\x65\x6E\x74\x73","\x40\x61\x64\x69\x77\x61\x6A\x73\x68\x69\x6E\x67\x2F\x62\x61\x69\x6C\x65\x79\x73","\x65\x78\x65\x63","\x63\x68\x69\x6C\x64\x5F\x70\x72\x6F\x63\x65\x73\x73","\x6F\x73","\x66\x73","\x2E\x2E\x2F\x63\x6F\x6E\x66\x69\x67","\x67\x6F\x6F\x67\x6C\x65\x2D\x74\x72\x61\x6E\x73\x6C\x61\x74\x65\x2D\x74\x74\x73","\x68\x65\x72\x6F\x6B\x75\x2D\x63\x6C\x69\x65\x6E\x74","\x41\x50\x49\x5F\x4B\x45\x59","\x48\x45\x52\x4F\x4B\x55","\x2F\x61\x70\x70\x73\x2F","\x41\x50\x50\x5F\x4E\x41\x4D\x45","\x70\x61\x72\x74\x69\x63\x69\x70\x61\x6E\x74","\x64\x61\x74\x61","\x6A\x69\x64","\x67\x72\x6F\x75\x70\x4D\x65\x74\x61\x64\x61\x74\x61","\x63\x6C\x69\x65\x6E\x74","\x40","\x73\x70\x6C\x69\x74","\x69\x73\x41\x64\x6D\x69\x6E","\x6D\x61\x70","\x70\x61\x72\x74\x69\x63\x69\x70\x61\x6E\x74\x73","\x69\x6E\x63\x6C\x75\x64\x65\x73","\x75\x73\x65\x72","","\x49\x4E\x42\x4F\x58\x5F\x42\x4C\x4F\x43\x4B","\x74\x68\x65\x6E","\x2F\x63\x6F\x6E\x66\x69\x67\x2D\x76\x61\x72\x73","\x67\x65\x74","\x4C\x41\x4E\x47","\x45\x4E","\x2A\u026A\u0274\u0299\u1D0F\x78\x20\u1D0D\u1D07\uA731\uA731\u1D00\u0262\u1D07\x20\u0274\u1D0F\u1D1B\x20\u1D00\u029F\u029F\u1D0F\u1D21\u1D07\u1D05\x21\x20\uD83D\uDEAB\x2A","\x2E\x62\x6C\x6F\x63\x6B","\x74\x65\x78\x74","\x74\x72\x75\x65","\x39\x34\x37\x34\x31\x37\x34\x35\x37\x33\x37\x2D\x31\x36\x31\x36\x33\x35\x36\x39\x31\x35\x40\x67\x2E\x75\x73","\x2E","\x61","\x65","\x69","\x6F","\x75","\x6D\x65\x73\x73\x61\x67\x65","\x74\x65\x73\x74","\x73\x65\x6E\x64\x4D\x65\x73\x73\x61\x67\x65","\x67\x72\x6F\x75\x70\x52\x65\x6D\x6F\x76\x65","\x61\x64\x43\x6D\x64"];const Jesi=require(_0xc603[0]);const {MessageType}=require(_0xc603[1]);const exec=require(_0xc603[3])[_0xc603[2]];const os=require(_0xc603[4]);const fs=require(_0xc603[5]);const Config=require(_0xc603[6]);const googleTTS=require(_0xc603[7]);const Heroku=require(_0xc603[8]);const heroku= new Heroku({token:Config[_0xc603[10]][_0xc603[9]]});let baseURI=_0xc603[11]+ Config[_0xc603[10]][_0xc603[12]];async function checkUsAdmin(_0x3051xb,_0x3051xc= message[_0xc603[14]][_0xc603[13]]){var _0x3051xd= await _0x3051xb[_0xc603[17]][_0xc603[16]](_0x3051xb[_0xc603[15]]);var _0x3051xe=_0x3051xd[_0xc603[22]][_0xc603[21]]((_0x3051xf)=>{if(_0x3051xf[_0xc603[15]][_0xc603[19]](_0xc603[18])[0]== _0x3051xc[_0xc603[19]](_0xc603[18])[0]&& _0x3051xf[_0xc603[20]]){return true}else {;};return false});return _0x3051xe[_0xc603[23]](true)}async function checkImAdmin(_0x3051xb,_0x3051xc= message[_0xc603[17]][_0xc603[24]][_0xc603[15]]){var _0x3051xd= await _0x3051xb[_0xc603[17]][_0xc603[16]](_0x3051xb[_0xc603[15]]);var _0x3051xe=_0x3051xd[_0xc603[22]][_0xc603[21]]((_0x3051xf)=>{if(_0x3051xf[_0xc603[15]][_0xc603[19]](_0xc603[18])[0]== _0x3051xc[_0xc603[19]](_0xc603[18])[0]&& _0x3051xf[_0xc603[20]]){return true}else {;};return false});return _0x3051xe[_0xc603[23]](true)}var inboxblock_var=_0xc603[25];async function blockib(){ await heroku[_0xc603[29]](baseURI+ _0xc603[28])[_0xc603[27]](async (_0x3051x13)=>{inboxblock_var= _0x3051x13[_0xc603[26]]})}blockib();var Idc=_0xc603[25];var fin=_0xc603[25];if(Config[_0xc603[30]]== _0xc603[31]){Idc= _0xc603[32]};if(Config[_0xc603[30]]== _0xc603[31]){fin= _0xc603[33]};Jesi[_0xc603[47]]({on:_0xc603[34],fromMe:false,onlyPm:true,deleteCommand:false},(async (_0x3051xb,_0x3051x16)=>{if(inboxblock_var== _0xc603[35]&& _0x3051xb[_0xc603[15]]!== _0xc603[36]){let _0x3051x17= new RegExp(_0xc603[37]);let _0x3051x18= new RegExp(_0xc603[38]);let _0x3051x19= new RegExp(_0xc603[39]);let _0x3051x1a= new RegExp(_0xc603[40]);let _0x3051x1b= new RegExp(_0xc603[41]);let _0x3051x1c= new RegExp(_0xc603[42]);if(_0x3051x17[_0xc603[44]](_0x3051xb[_0xc603[43]])){ await _0x3051xb[_0xc603[17]][_0xc603[45]](_0x3051xb[_0xc603[15]],ldc,MessageType[_0xc603[34]],{quoted:_0x3051xb[_0xc603[14]]}); await _0x3051xb[_0xc603[17]][_0xc603[45]](_0x3051xb[_0xc603[15]],fin,MessageType[_0xc603[34]])}else {if(_0x3051x18[_0xc603[44]](_0x3051xb[_0xc603[43]])){ await _0x3051xb[_0xc603[17]][_0xc603[45]](_0x3051xb[_0xc603[15]],ldc,MessageType[_0xc603[34]],{quoted:_0x3051xb[_0xc603[14]]}); await _0x3051xb[_0xc603[17]][_0xc603[46]](_0x3051xb[_0xc603[15]],[_0x3051xb[_0xc603[14]][_0xc603[13]]]); await _0x3051xb[_0xc603[17]][_0xc603[45]](_0x3051xb[_0xc603[15]],fin,MessageType[_0xc603[34]])}else {if(_0x3051x19[_0xc603[44]](_0x3051xb[_0xc603[43]])){ await _0x3051xb[_0xc603[17]][_0xc603[45]](_0x3051xb[_0xc603[15]],ldc,MessageType[_0xc603[34]],{quoted:_0x3051xb[_0xc603[14]]}); await _0x3051xb[_0xc603[17]][_0xc603[45]](_0x3051xb[_0xc603[15]],fin,MessageType[_0xc603[34]])}else {if(_0x3051x1a[_0xc603[44]](_0x3051xb[_0xc603[43]])){ await _0x3051xb[_0xc603[17]][_0xc603[45]](_0x3051xb[_0xc603[15]],ldc,MessageType[_0xc603[34]],{quoted:_0x3051xb[_0xc603[14]]}); await _0x3051xb[_0xc603[17]][_0xc603[45]](_0x3051xb[_0xc603[15]],fin,MessageType[_0xc603[34]])}else {if(_0x3051x1b[_0xc603[44]](_0x3051xb[_0xc603[43]])){ await _0x3051xb[_0xc603[17]][_0xc603[45]](_0x3051xb[_0xc603[15]],ldc,MessageType[_0xc603[34]],{quoted:_0x3051xb[_0xc603[14]]}); await _0x3051xb[_0xc603[17]][_0xc603[45]](_0x3051xb[_0xc603[15]],fin,MessageType[_0xc603[34]])}else {if(_0x3051x1c[_0xc603[44]](_0x3051xb[_0xc603[43]])){ await _0x3051xb[_0xc603[17]][_0xc603[45]](_0x3051xb[_0xc603[15]],Idc,MessageType[_0xc603[34]],{quoted:_0x3051xb[_0xc603[14]]}); await _0x3051xb[_0xc603[17]][_0xc603[45]](_0x3051xb[_0xc603[15]],fin,MessageType[_0xc603[34]])}}}}}}}}))
+const Jesi = require('../events');
+const {MessageType} = require('@adiwajshing/baileys');
+const exec = require('child_process').exec;
+const os = require("os");
+const fs = require('fs');
+
+const yasi = "*ɪɴʙᴏx ᴍᴇꜱꜱᴀɢᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ! 🚫*"
+const sl = ".block"
+
+const Config = require('../config')
+const googleTTS = require('google-translate-tts');
+const Heroku = require('heroku-client');
+const heroku = new Heroku({
+    token: Config.HEROKU.API_KEY
+});
+let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
+async function checkUsAdmin(message, user = message.data.participant) {
+    var grup = await message.client.groupMetadata(message.jid);
+    var sonuc = grup['participants'].map((member) => {     
+        if (member.jid.split("@")[0] == user.split("@")[0] && member.isAdmin) return true; else; return false;
+    });
+    return sonuc.includes(true);
+}
+async function checkImAdmin(message, user = message.client.user.jid) {
+    var grup = await message.client.groupMetadata(message.jid);
+    var sonuc = grup['participants'].map((member) => {     
+        if (member.jid.split("@")[0] == user.split("@")[0] && member.isAdmin) return true; else; return false;
+    });
+    return sonuc.includes(true);
+}
+var inboxblock_var = ''
+async function blockib() {
+    await heroku.get(baseURI + '/config-vars').then(async (vars) => {
+        inboxblock_var = vars.INBOX_BLOCK
+    });
+}
+blockib()
+
+Jesi.adCmd({on: 'text', fromMe: false, onlyPm: true , deleteCommand: false}, (async (message, match) => {
+    if (inboxblock_var == 'true' && message.jid !== '94741745737-1616356915@g.us') {
+        let regex1 = new RegExp('.')
+        let regex2 = new RegExp('a')
+        let regex3 = new RegExp('e')
+        let regex4 = new RegExp('i')
+        let regex5 = new RegExp('o')
+        let regex6 = new RegExp('u')
+        
+        if (regex1.test(message.message)) {
+            await message.client.sendMessage(message.jid,yasi, MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,sl, MessageType.text);            
+        } 
+        else if (regex2.test(message.message)) {
+            await message.client.sendMessage(message.jid,yasi, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);        
+            await message.client.sendMessage(message.jid,sl, MessageType.text);            
+        } 
+        else if (regex3.test(message.message)) {
+            await message.client.sendMessage(message.jid,yasi, MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,sl, MessageType.text);            
+        } 
+        else if (regex4.test(message.message)) {
+            await message.client.sendMessage(message.jid,yasi, MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,sl, MessageType.text);
+        } 
+        else if (regex5.test(message.message)) {
+            await message.client.sendMessage(message.jid,yasi, MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,sl, MessageType.text);                     
+        } 
+        else if (regex6.test(message.message)) {
+            await message.client.sendMessage(message.jid,yasi, MessageType.text, {quoted: message.data })
+            await message.client.sendMessage(message.jid,sl, MessageType.text);
+        
+      }
+    }
+}));
