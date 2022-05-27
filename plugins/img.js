@@ -73,3 +73,5 @@ Jesi.adCmd({pattern: 'img ?(.*)', fromMe: wk, desc: Lang.IMG_DESC}, (async (mess
           return;
         }
     }));
+    
+}
