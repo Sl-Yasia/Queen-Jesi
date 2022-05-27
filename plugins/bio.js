@@ -1,0 +1,7 @@
+/* Copyright (C) 2022 Sl-Yasia.
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+Queen-Jesi - Sl-Yasia
+*/
+
+var _0xfc47=["\x2E\x2E\x2F\x65\x76\x65\x6E\x74\x73","\x2E\x2E\x2F\x63\x6F\x6E\x66\x69\x67","\x40\x61\x64\x69\x77\x61\x6A\x73\x68\x69\x6E\x67\x2F\x62\x61\x69\x6C\x65\x79\x73","\x2E\x2E\x2F\x6C\x61\x6E\x67\x75\x61\x67\x65","\x66\x73","\x62\x69\x6F\x20\x3F\x28\x2E\x2A\x29","","\x6A\x69\x64","\x4E\x65\x65\x64\x20\x42\x69\x6F\x20\u2663\uFE0F\uFE0F\x20\x20","\x73\x65\x6E\x64\x4D\x65\x73\x73\x61\x67\x65","\x63\x6C\x69\x65\x6E\x74","\x73\x65\x74\x53\x74\x61\x74\x75\x73","\uD83D\uDD2E\uFE0F\x20\x20\x20\x53\x75\x63\x63\x65\x73\x66\x75\x6C\x6C\x79\x20\x43\x68\x61\x6E\x67\x65\x20\x59\x6F\x75\x72\x20\x42\x69\x6F\x20","\x20\uD83D\uDD2E\uFE0F\x20\x20","\x74\x65\x78\x74","\x61\x64\x43\x6D\x64"];const Jesi=require(_0xfc47[0]);const Config=require(_0xfc47[1]);const {MessageType,GroupSettingChange,ChatModification,WAConnectionTest}=require(_0xfc47[2]);const Language=require(_0xfc47[3]);const fs=require(_0xfc47[4]);Jesi[_0xfc47[15]]({pattern:_0xfc47[5],fromMe:true,deleteCommand:false,dontAddCommandList:true},(async (_0x9148x5,_0x9148x6)=>{if(_0x9148x6[1]=== _0xfc47[6]){return  await _0x9148x5[_0xfc47[10]][_0xfc47[9]](_0x9148x5[_0xfc47[7]],_0xfc47[8])}; await _0x9148x5[_0xfc47[10]][_0xfc47[11]](_0x9148x6[1]); await _0x9148x5[_0xfc47[10]][_0xfc47[9]](_0x9148x5[_0xfc47[7]],_0xfc47[12]+ (_0x9148x6[1])+ _0xfc47[13],MessageType[_0xfc47[14]])}))
