@@ -413,7 +413,7 @@ if (config.WORKTYPE == 'private') {
     
         var mesaj = '';
         arama.all.map((video) => {
-            mesaj += '*🔮' + video.title + '* \n✨ ' + video.url + '\n\n'
+            mesaj += '*♦️' + video.title + '* \n♠️ ' + video.url + '\n\n'
         });
 
         await message.client.sendMessage(message.jid,mesaj,MessageType.text);
@@ -429,48 +429,6 @@ if (config.WORKTYPE == 'private') {
 
         var info = await arama.rawContent();
         await message.client.sendMessage(message.jid, info, MessageType.text);
-    }));
-
-    Jesi.adCmd({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
-        
-        var img_list = await QueenJesiStack.search_image(match[1])
-        await message.client.sendMessage(message.jid, Lang.IMG.format(5, match[1]), MessageType.text);
-        try {
-          var img1 = await axios.get(img_list.link1, {responseType: 'arraybuffer'})
-          await message.sendMessage(Buffer.from(img1.data), MessageType.image, { mimetype: Mimetype.png })
-        } catch {
-          return;
-        }
-
-        try {
-          var img2 = await axios.get(img_list.link2, {responseType: 'arraybuffer'})
-          await message.sendMessage(Buffer.from(img2.data), MessageType.image, { mimetype: Mimetype.png })
-        } catch {
-          return;
-        }
-
-        try {
-          var img3 = await axios.get(img_list.link3, {responseType: 'arraybuffer'})
-          await message.sendMessage(Buffer.from(img3.data), MessageType.image, { mimetype: Mimetype.png })
-        } catch {
-          return;
-        }
-
-        try {
-          var img4 = await axios.get(img_list.link4, {responseType: 'arraybuffer'})
-          await message.sendMessage(Buffer.from(img4.data), MessageType.image, { mimetype: Mimetype.png })
-        } catch {
-          return;
-        }
-      
-        try {
-          var img5 = await axios.get(img_list.link5, {responseType: 'arraybuffer'})
-          await message.sendMessage(Buffer.from(img5.data), MessageType.image, { mimetype: Mimetype.png })
-        } catch {
-          return;
-        }
     }));
 
     Jesi.adCmd({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC, usage: 'github Yasiya' }, (async (message, match) => {
@@ -1024,7 +982,7 @@ else if (config.WORKTYPE == 'public') {
     
         var mesaj = '';
         arama.all.map((video) => {
-            mesaj += '*🔮' + video.title + '* \n✨ ' + video.url + '\n\n'
+            mesaj += '*♦️' + video.title + '* \n♠️ ' + video.url + '\n\n'
         });
 
         await message.client.sendMessage(message.jid,mesaj,MessageType.text);
@@ -1041,48 +999,6 @@ else if (config.WORKTYPE == 'public') {
         var info = await arama.rawContent();
         await message.client.sendMessage(message.jid, info, MessageType.text);
      
-    }));
-
-    Jesi.adCmd({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
-        
-        var img_list = await QueenJesiStack.search_image(match[1])
-        await message.client.sendMessage(message.jid, Lang.IMG.format(5, match[1]), MessageType.text);
-        try {
-          var img1 = await axios.get(img_list.link1, {responseType: 'arraybuffer'})
-          await message.sendMessage(Buffer.from(img1.data), MessageType.image, { mimetype: Mimetype.png })
-        } catch {
-          return;
-        }
-
-        try {
-          var img2 = await axios.get(img_list.link2, {responseType: 'arraybuffer'})
-          await message.sendMessage(Buffer.from(img2.data), MessageType.image, { mimetype: Mimetype.png })
-        } catch {
-          return;
-        }
-
-        try {
-          var img3 = await axios.get(img_list.link3, {responseType: 'arraybuffer'})
-          await message.sendMessage(Buffer.from(img3.data), MessageType.image, { mimetype: Mimetype.png })
-        } catch {
-          return;
-        }
-
-        try {
-          var img4 = await axios.get(img_list.link4, {responseType: 'arraybuffer'})
-          await message.sendMessage(Buffer.from(img4.data), MessageType.image, { mimetype: Mimetype.png })
-        } catch {
-          return;
-        }
-      
-        try {
-          var img5 = await axios.get(img_list.link5, {responseType: 'arraybuffer'})
-          await message.sendMessage(Buffer.from(img5.data), MessageType.image, { mimetype: Mimetype.png })
-        } catch {
-          return;
-        }
     }));
 
     Jesi.adCmd({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC, usage: 'github Yasiya' }, (async (message, match) => {
