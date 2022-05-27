@@ -13,9 +13,12 @@ const config = require('../config');
 const Config = require('../config');
 const LanguageDetect = require('languagedetect');
 const QueenJesiStack = require('queenjesi-npm');
-let wk = Config.WORKTYPE == 'public' ? false : true
 const exec = require('child_process').exec;
 const os = require("os");
+
+const Language = require('../language');
+const Lang = Language.getString('scrapers');
+let wk = Config.WORKTYPE == 'public' ? false : true
 
 if (Config.IMG_ON == 'true') {
 Jesi.adCmd({pattern: 'img ?(.*)', fromMe: wk, desc: Lang.IMG_DESC}, (async (message, match) => {
