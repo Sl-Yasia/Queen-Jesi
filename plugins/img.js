@@ -20,7 +20,6 @@ const Language = require('../language');
 const Lang = Language.getString('scrapers');
 let wk = Config.WORKTYPE == 'public' ? false : true
 
-if (Config.IMG_ON == 'true') {
     Jesi.adCmd({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
