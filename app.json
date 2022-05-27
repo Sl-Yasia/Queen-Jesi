@@ -129,6 +129,11 @@
             "required": false,
             "value": "false"
         },
+        "IMG_ON": {
+            "description": "Image Download Command On Off.",
+            "required": false,
+            "value": "true"
+        },
         "WELCOME_GIF": {
             "description": "Set Custom Welcome Gif Past Direct Link of Mp4 or gif",
             "required": false
