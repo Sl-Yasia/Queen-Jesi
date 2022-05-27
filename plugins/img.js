@@ -17,6 +17,7 @@ let wk = Config.WORKTYPE == 'public' ? false : true
 const exec = require('child_process').exec;
 const os = require("os");
 
+if (Config.IMG_ON == 'true') {
 Jesi.adCmd({pattern: 'img ?(.*)', fromMe: wk, desc: Lang.IMG_DESC}, (async (message, match) => {
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
