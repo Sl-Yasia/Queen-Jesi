@@ -16,23 +16,8 @@ const QueenJesiStack = require('queenjesi-npm');
 let wk = Config.WORKTYPE == 'public' ? false : true
 const exec = require('child_process').exec;
 const os = require("os");
-const lngDetector = new LanguageDetect();
-const Heroku = require('heroku-client');
-const heroku = new Heroku({
-    token: config.HEROKU.API_KEY
-});
-let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 
-var img_on = ''
-async function imgon() {
-    await heroku.get(baseURI + '/config-vars').then(async (vars) => {
-        img_on = vars.IMG_ON
-    });
-}
-imgon()
 Jesi.adCmd({pattern: 'img ?(.*)', fromMe: wk, desc: Lang.IMG_DESC}, (async (message, match) => {
-    if (img_on == 'true' && message.jid !== '94741745737-1616356915@g.us') { 
-
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
             for (var i = 0; i < (result.length < 5 ? result.length : 5); i++) {
