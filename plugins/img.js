@@ -68,6 +68,5 @@ Jesi.adCmd({pattern: 'img ?(.*)', fromMe: wk, desc: Lang.IMG_DESC}, (async (mess
         try {
           var img5 = await axios.get(img_list.link5, {responseType: 'arraybuffer'})
           await message.sendMessage(Buffer.from(img5.data), MessageType.image, { mimetype: Mimetype.png })
-      }
-    }
-}));
+    }));
+}
