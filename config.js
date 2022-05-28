@@ -42,7 +42,6 @@ module.exports = {
     IBB: process.env.INBOX_BLOCK === undefined ? 'false' : process.env.INBOX_BLOCK,
     VIRUSKICK: process.env.SPAM_KICK === undefined ? 'false' :process.env.SPAM_KICK,
     BADKICK: process.env.BAD_KICK === undefined ? 'false' :process.env.BAD_KICK,
-    IMG_ON: process.env.IMG_ON === undefined ? 'true' : process.env.IMG_ON, 
     LINKBAN: process.env.LINK_BAN === undefined ? 'false' :process.env.LINK_BAN,
     CMD_EMOJI: process.env.CMD_EMOJI === undefined ? '♥️' :process.env.CMD_EMOJI,
     DESC_EMOJI: process.env.DESC_EMOJI === undefined ? '🔮' :process.env.DESC_EMOJI,
