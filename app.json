@@ -3,7 +3,7 @@
     "description": "QueenJesi project - Makes it easy and fun to use Whatsapp.",
     "logo": "https://i.imgur.com/Dj8Vvqr.jpg",
     "keywords": ["whatsapp", "userbot", "Jesi", "QueenJesi", "bot", "api", "ai"],
-    "repository": "https://github.com/Sl-Yasiya/Queen-Jesi",
+    "repository": "https://github.com/Sl-Yasia/Queen-Jesi",
     "website":   "https://t.me/ya_s_i_y_a",
     "success_url": "https://t.me/ya_s_i_y_a",
     "stack": "container",
@@ -112,7 +112,7 @@
         "SPAM_KICK": {
             "description": "Remove Spammers from the Group.",
             "required": false,
-            "value": "false"
+            "value": "true"
         },
         "BAD_KICK": {
             "description": "Remove Badword Senders from the Group.",
@@ -129,11 +129,6 @@
             "required": false,
             "value": "false"
         },
-        "IMG_ON": {
-            "description": "Image Download Command On Off.",
-            "required": false,
-            "value": "true"
-        },
         "WELCOME_GIF": {
             "description": "Set Custom Welcome Gif Past Direct Link of Mp4 or gif",
             "required": false
@@ -145,7 +140,7 @@
         "ALIVE_LOGO": {
             "description": "Customizable Alive Logo.",
             "required": false,
-            "value": "https://i.imgur.com/edP1BcX.jpg"
+            "value": "https://i.imgur.com/jnGzn4M.jpg"
         },
         "CPK": {
             "description": "Customizable Caption.",
@@ -155,7 +150,7 @@
         "VCPK": {
             "description": "Customizable Youtube Video Download Caption.",
             "required": false,
-            "value": "𓂀 ♥️𝓥𝓲𝓭𝓮𝓸 𝓑𝔂 𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲 ♥️ 𓂀"
+            "value": "𓂀 ♥️𝓑𝔂 𝓠𝓾𝓮𝓮𝓷 𝓙𝓮𝓼𝓲 ♥️ 𓂀"
         },
         "MENU_NAME": {
             "description": "Customizable Menu Name.",
@@ -185,12 +180,12 @@
         "CMD_EMOJI": {
             "description": "This Is Menu Cmd Emoji You Can Change It Here.",
             "required": false,
-            "value": "🛸"
+            "value": "♠️"
         },
         "DESC_EMOJI": {
             "description": "This Is Menu Desc Emoji You Can Change It Here.",
             "required": false,
-            "value": "✨️"
+            "value": "♦️"
         },
         "ALIVE_MESSAGE": {
             "description": "Customizable Alive Message! Use => default, to Change back.",
