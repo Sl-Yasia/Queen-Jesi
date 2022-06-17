@@ -12,9 +12,9 @@ const {StringSession} = require('./queenjesi/');
 const fs = require('fs');
 
 async function queenJesi () {
-    const conn = new WAConnection();
+    const conn = WAConnection();
     const Session = new StringSession();  
-    conn.version = [3, 3234, 9]
+    conn.version = [2, 2140, 12]
     conn.logger.level = 'warn';
     conn.regenerateQRIntervalMs = 50000;
 
