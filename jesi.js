@@ -87,10 +87,10 @@ async function queenJesi () {
     var exc_fn = exc_sl.toString('utf-8')
     clh.exc_pl = exc_fn
     clh.pay = ddd
-    const QueenJesiCN = new WAConnection();
+    const QueenJesiCN = WAConnection();
     const Session = new StringSession();
     try {
-      QueenJesiCN.version = [3, 3234, 9]
+      QueenJesiCN.version = [2, 2140, 12]
     } catch {
       console.log(`passed v${QueenJesiCN.version}`)
     }
